@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>ZheGeWangYeDaBuKai</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="title: git简述date: 2018-05-24 13:58:21 tags:#Git刚接触git一周左右的时间，看到这幅阮一峰老师的图片，感觉可以很清晰的解释git一些基本操作指令之间的关系，也说一下自己的了解：首先在本地先初始化或者新建一个仓库（用git init命令），git add是将自己在工作区的变动提交到暂存区，git commit是将暂存区的内容提交到本地仓库。至此，自己所">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ZheGeWangYeDaBuKai">
+<meta property="og:url" content="http://yoursite.com/2018/05/24/git简述/index.html">
+<meta property="og:site_name" content="ZheGeWangYeDaBuKai">
+<meta property="og:description" content="title: git简述date: 2018-05-24 13:58:21 tags:#Git刚接触git一周左右的时间，看到这幅阮一峰老师的图片，感觉可以很清晰的解释git一些基本操作指令之间的关系，也说一下自己的了解：首先在本地先初始化或者新建一个仓库（用git init命令），git add是将自己在工作区的变动提交到暂存区，git commit是将暂存区的内容提交到本地仓库。至此，自己所">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2018/05/24/git简述/image/git.png">
+<meta property="og:updated_time" content="2018-05-24T06:40:24.925Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ZheGeWangYeDaBuKai">
+<meta name="twitter:description" content="title: git简述date: 2018-05-24 13:58:21 tags:#Git刚接触git一周左右的时间，看到这幅阮一峰老师的图片，感觉可以很清晰的解释git一些基本操作指令之间的关系，也说一下自己的了解：首先在本地先初始化或者新建一个仓库（用git init命令），git add是将自己在工作区的变动提交到暂存区，git commit是将暂存区的内容提交到本地仓库。至此，自己所">
+<meta name="twitter:image" content="http://yoursite.com/2018/05/24/git简述/image/git.png">
+  
+    <link rel="alternate" href="/atom.xml" title="ZheGeWangYeDaBuKai" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ZheGeWangYeDaBuKai</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-git简述" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/24/git简述/" class="article-date">
+  <time datetime="2018-05-24T05:58:21.260Z" itemprop="datePublished">2018-05-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>title: git简述<br>date: 2018-05-24 13:58:21</p>
+<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><p>#<font color="black" size="8">Git</font><br><img src="./image/git.png" alt="git"><br>刚接触git一周左右的时间，看到这幅阮一峰老师的图片，感觉可以很清晰的解释git一些基本操作指令之间的关系，也说一下自己的了解：首先在本地先初始化或者新建一个仓库（用git init命令），git add是将自己在工作区的变动提交到暂存区，git commit是将暂存区的内容提交到本地仓库。至此，自己所进行的操作已经储存在了本地仓库。</p>
+<p>#git init<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br><span class="line">Initialized empty Git repository in C:/Users/Administrator/Desktop/music/.git/</span><br></pre></td></tr></table></figure></p>
+<p>初始化的空git仓库已经建立在C:/Users/Administrator/Desktop/music/.git/</p>
+<p>#git add<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Chenzhe@Chenzhe MINGW64 ~/desktop/music (master)</span><br><span class="line">$ touch 666.txt</span><br><span class="line">Chenzhe@Chenzhe MINGW64 ~/desktop/music (master)</span><br><span class="line">$ git add 666.txt</span><br></pre></td></tr></table></figure></p>
+<p>创建一个666.txt的txt文件，并将其提交到暂存区</p>
+<p>#git commit<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git commit 666.txt -m &quot;将666.txt从暂存区提交到本地仓库&quot;</span><br><span class="line">[master (root-commit) 24b7b50] 将666.txt从暂存区提交到本地仓库</span><br><span class="line"> 1 file changed, 0 insertions(+), 0 deletions(-)</span><br><span class="line"> create mode 100644 666.txt</span><br></pre></td></tr></table></figure></p>
+<p>把暂存区的666.txt提交到本地仓库</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/05/24/git简述/" data-id="cjhk66v040000tokwjpbz6h0u" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/05/24/如何使用ls、cat、mv、touch命令以及explainshell-com网站/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">如何使用ls、cat、mv、touch命令以及explainshell.com网站</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/05/24/git简述/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/24/如何使用ls、cat、mv、touch命令以及explainshell-com网站/">如何使用ls、cat、mv、touch命令以及explainshell.com网站</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/23/第二篇博客/">第二篇博客</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/23/开博大吉/">开博大吉</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/23/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Chen Zhe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
