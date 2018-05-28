@@ -84,10 +84,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><h2 id="URI"><a href="#URI" class="headerlink" title="URI"></a>URI</h2><p>URI(Uniform Resource Identifier),即统一资源标识符，是一个用于标识某一互联网资源名称的字符串。该种标识允许用户对网络中(www)的资源通过特定的协议进行交互操作。<br>URI最常见的形式为URL(统一资源定位符,Uniform Resource Locator)，和罕见的用法URN(统一资源名称,Uniform Resource Name):<br><img src="https://raw.githubusercontent.com/chenzhe512/blog-generator/master/image/url.png" alt="URL"><br>URL如图通过URL你可以确定一个唯一的网址。<a href="https://www.baidu.com/s?wd=hello&amp;rsv_spt=1#5中，其中.com是顶级域名，baidu是二级域名，www是三级域名。" target="_blank" rel="noopener">https://www.baidu.com/s?wd=hello&amp;rsv_spt=1#5中，其中.com是顶级域名，baidu是二级域名，www是三级域名。</a><br>URN,ISBN: 9787115275790 就是一个 URN，通过 URN 你可以确定一个「唯一的」资源，ISBN: 9787115275790 对应的资源的是《JavaScript 高级程序设计（第三版）》这本书。你去是介绍任何一个图书馆、书店，他们都知道是这本书。<br>URI可被视为定位符（URL），名称（URN）或两者兼备。统一资源名（URN）如同一个人的名称，而统一资源定位符（URL）代表一个人的住址。换言之，URN定义某事物的身份，而URL提供查找该事物的方法。</p>
+        <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><h2 id="URI"><a href="#URI" class="headerlink" title="URI"></a>URI</h2><p>URI(Uniform Resource Identifier),即统一资源标识符，是一个用于标识某一互联网资源名称的字符串。该种标识允许用户对网络中(www)的资源通过特定的协议进行交互操作。<br>URI最常见的形式为URL(统一资源定位符,Uniform Resource Locator)，和罕见的用法URN(统一资源名称,Uniform Resource Name):<br><img src="https://raw.githubusercontent.com/chenzhe512/blog-generator/master/image/url.png" alt="URL"><br>URL包括协议、域名、端口号、路径、查询参数、锚点。图中没有端口<br>URL如图通过URL你可以确定一个唯一的网址。<a href="https://www.baidu.com/s?wd=hello&amp;rsv_spt=1#5，其中.com是顶级域名，baidu是二级域名，www是三级域名。" target="_blank" rel="noopener">https://www.baidu.com/s?wd=hello&amp;rsv_spt=1#5，其中.com是顶级域名，baidu是二级域名，www是三级域名。</a><br>URN,ISBN: 9787115275790 就是一个 URN，通过 URN 你可以确定一个「唯一的」资源，ISBN: 9787115275790 对应的资源的是《JavaScript 高级程序设计（第三版）》这本书。你去是介绍任何一个图书馆、书店，他们都知道是这本书。<br>URI可被视为定位符（URL），名称（URN）或两者兼备。统一资源名（URN）如同一个人的名称，而统一资源定位符（URL）代表一个人的住址。换言之，URN定义某事物的身份，而URL提供查找该事物的方法。</p>
 <h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><p>HTTP(超文本传输协议，HyperText Transfer Protocol)，一种用于分布式、协作式和超媒体信息系统的应用层协议。HTTP是万维网的数据通信的基础。<br>设计HTTP最初的目的是为了提供一种发布和接收HTML页面的方法。通过HTTP或者HTTPS协议请求的资源由统一资源标识符（Uniform Resource Identifiers，URI）来标识。</p>
 <h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><p>HTML(超文本标记语言,HyperText Markup Language）是一种用于创建网页的标准标记语言。HTML是一种基础技术，常与CSS、JavaScript一起被众多网站用于设计令人赏心悦目的网页、网页应用程序以及移动应用程序的用户界面[1]。网页浏览器可以读取HTML文件，并将其渲染成可视化网页。HTML描述了一个网站的结构语义随着线索的呈现，使之成为一种标记语言而非编程语言。</p>
-<h2 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h2><p>DNS(域名系统,Domain Name System）是互联网的一项服务。它作为将域名和IP地址相互映射的一个分布式数据库，能够使人更方便地访问互联网。DNS使用TCP和UDP端口53。当前，对于每一级域名长度的限制是63个字符，域名总长度则不能超过253个字符。</p>
+<h2 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h2><p>DNS(域名系统,Domain Name System）是互联网的一项服务。它作为将域名和IP地址相互映射的一个分布式数据库，能够使人更方便地访问互联网。DNS使用TCP和UDP端口53。当前，对于每一级域名长度的限制是63个字符，域名总长度则不能超过253个字符。<br>DNS的作用是输入域名，输出对应的IP。</p>
 <h1 id="请求与响应"><a href="#请求与响应" class="headerlink" title="请求与响应"></a>请求与响应</h1><h2 id="请求"><a href="#请求" class="headerlink" title="请求"></a>请求</h2><h3 id="请求的格式"><a href="#请求的格式" class="headerlink" title="请求的格式"></a>请求的格式</h3><p>1 动词 路径 协议/版本<br>2   Key1: value1<br>    Key2: value2<br>    Key3: value3<br>    Content-Type: application/x-www-form-urlencoded<br>    Host: <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>    User-Agent: curl/7.54.0<br>3<br>4 要上传的数据</p>
 <h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><p>1.请求最多四部分，最少三部分，第四部分可以为空<br>2.第三部分永远为一个回车<br>3.动词包括GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS等；GET为获取信息，POST为上传信息，PUT为整体更新，PATCH为局部更新，DELETE为删除<br>4.路径包括查询参数但不包括锚点<br>5.如果没写路径，默认为/<br>6.第二部分中的Content-Type标注了第四部分的格式<br>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt; POST / HTTP/1.1</span><br><span class="line">&gt; Host: www.baidu.com</span><br><span class="line">&gt; User-Agent: curl/7.55.0</span><br><span class="line">&gt; Accept: */*</span><br><span class="line">&gt; Frank: xxx</span><br><span class="line">&gt; Content-Length: 10</span><br><span class="line">&gt; Content-Type: application/x-www-form-urlencoded</span><br><span class="line">&gt;</span><br><span class="line">&#125; [10 bytes data]</span><br></pre></td></tr></table></figure></p>
 <h2 id="响应"><a href="#响应" class="headerlink" title="响应"></a>响应</h2><h3 id="响应的格式"><a href="#响应的格式" class="headerlink" title="响应的格式"></a>响应的格式</h3><p>1 协议/版本号 状态码 状态解释<br>2   Key1: value1<br>    Key2: value2<br>    Content-Length: 17931<br>    Content-Type: text/html<br>3<br>4 要下载的内容</p>
@@ -100,7 +100,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/28/HTTP/" data-id="cjhq00t3100005kkwdyd8ujz9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/28/HTTP/" data-id="cjhq1859t0000m4kwnv35ncmv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -142,7 +142,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/28/如何写一篇博客/" data-id="cjhpzx05w0003q8kw88m6ped6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/28/如何写一篇博客/" data-id="cjhq185ag0003m4kw7umjx1r7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -185,7 +185,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/24/git简述/" data-id="cjhpzx0560000q8kw0yqg2zdd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/24/git简述/" data-id="cjhq185a60001m4kwdc46ooqf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -226,7 +226,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/24/如何使用ls、cat、mv、touch命令以及explainshell-com网站/" data-id="cjhpzx05r0002q8kw0a32t7qy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/24/如何使用ls、cat、mv、touch命令以及explainshell-com网站/" data-id="cjhq185ac0002m4kw6non3eml" class="article-share-link">Share</a>
       
       
     </footer>
@@ -271,7 +271,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/23/hello-world/" data-id="cjhpzx05l0001q8kwyoqajgat" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/23/hello-world/" data-id="cjhq185aj0004m4kwjdw6eiif" class="article-share-link">Share</a>
       
       
     </footer>
