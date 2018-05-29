@@ -84,11 +84,29 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="·网络与IP"><a href="#·网络与IP" class="headerlink" title="·网络与IP"></a><strong>·网络与IP</strong></h1><p>HTTP协议的底层是由TCP协议和IP协议构建的。</p>
+<h2 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h2><p>TCP协议(传输控制协议，Transmission Control Protocol),是一种面向连接、可靠的、基于字节流的传输层通讯协议。</p>
+<h3 id="⒈TCP和UDP的区别是什么？"><a href="#⒈TCP和UDP的区别是什么？" class="headerlink" title="⒈TCP和UDP的区别是什么？"></a>⒈TCP和UDP的区别是什么？</h3><pre><code>TCP可靠、面向连接、相对UDP较慢；
+UDP不可靠、不面向连接、相对TCP较快。
+</code></pre><h3 id="⒉TCP的三次握手是什么？"><a href="#⒉TCP的三次握手是什么？" class="headerlink" title="⒉TCP的三次握手是什么？"></a>⒉TCP的三次握手是什么？</h3><pre><code>每次建立连接前，客户端和服务端都要进行三次对话才能建立连接正式传输内容。
+客户端：我要连接你了，可以吗？
+服务端：嗯，我准备好了，连接我吧。
+客户端：那我连接你了啊。
+开始后面步骤
+</code></pre><h2 id="IP"><a href="#IP" class="headerlink" title="IP"></a>IP</h2><p>IP协议(网络协议，Internet Protocol),是用于分组交换数据网络的一种数据。<br><img src="https://video.jirengu.com/FrpH13m02stp7dsmczIsTpGdjeGS" alt="IP"><br>如图所示：以路由器为分界线，通过路由器连接上网的手机、电脑等都属于内网；连接向路由器的电信DNS服务器、电信其他用户（百度、阿里等）都属于外网；由此，路由器也称作网关。<br>路由器通过电信DNS上网，会产生一个 <strong>外网IP</strong> ,例如「14.17.32.211」，重启路由器的话可能会被分配一个新的外网IP，你的  <strong>路由器没有固定的外网IP</strong>  ；（也可以花钱购买一个固定的外网IP，不过对于自身无用，BAT大公司才会租用许多外网IP，这样才能提供稳定的服务）<br>路由器会在家里创建一个 <strong>内网IP</strong> ，格式一般为192.168.xxx.xxx<br>一般路由器会给自身分配一个好记的内网IP，如192.168.1.1;电脑的可能为192.168.1.2，手机的为192.168.1.3等<br>现在路由器有一个外网IP（14.17.32.211）和一个内网 IP（192.168.1.1）：<br>    内网中的设备可以相互访问，但不能直接访问外网，须通过路由器<br>    外网中的设备也可以相互访问，但也无法直接访问你的内网设备，也要经过路由器<br>    内网和外网是两个隔离的空间，无法互通，需经过路由器（既有外网IP又有内网IP），遂也称网关<br>除了内网IP和外网IP，还有两个特殊的IP：<br>    本地IP：127.0.0.1(ping 127.0.0.1响应很快)，且hosts文件里有一行 127.0.0.1 localhost，意思是localhost指向127.0.0.1,所以localhost也指设备自身<br>    特殊IP：0.0.0.0，不代表任何设备</p>
+<h2 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h2><p>如果通过TCP/UDP协议访问一个设备，除了指定IP外，还必须指定端口。端口只是一个编号，并不是一种硬件。一个端口只对应一种服务。<br>一个服务器不一定只提供一种服务，例如即提供HTTP服务，有提供FTP服务，还提供SMTP服务（邮件服务），一个IP是无法确定你需要的是哪种服务的。所以需要提供你所需服务的端口。<br>每一个机器一共有65535（2^16-1）个端口：<br>    0-1023（2^10-1）号端口是留给系统使用的，只有管理员权限才能使用这1024个端口，其他给普通用户使用；（HTTP服务对应80端口，HTTPS服务对应443端口，FTP服务对应21端口）<br>    如果一个端口正在提供服务（占用状态），那么就不能再使用这个端口；<br>为什么平常访问网页网址时并没有提供端口，因为浏览器帮你加了端口。</p>
+<h1 id="·Node-js服务器"><a href="#·Node-js服务器" class="headerlink" title="·Node.js服务器"></a><strong>·Node.js服务器</strong></h1><p><code>`</code><br>var http = require(‘http’)<br>var fs = require(‘fs’)<br>var url = require(‘url’)<br>var port = process.argv[2]</p>
+<p>if(!port){<br>  console.log(‘请指定端口号好不啦？\nnode server.js 8888 这样不会吗？’)<br>  process.exit(1)<br>}</p>
+<p>var server = http.createServer(function(request, response){<br>  var parsedUrl = url.parse(request.url, true)<br>  var path = request.url<br>  var query = ‘’<br>  if(path.indexOf(‘?’) &gt;= 0){ query = path.substring(path.indexOf(‘?’)) }<br>  var pathNoQuery = parsedUrl.pathname<br>  var queryObject = parsedUrl.query<br>  var method = request.method</p>
+<p>  /<strong><em>**</em></strong> 从这里开始看，上面不要看 <strong><strong><em>**</em></strong></strong>/</p>
+<p>  console.log(‘HTTP 路径为\n’ + path)<br>  if(path == ‘/style.js’){<br>    response.setHeader(‘Content-Type’, ‘text/css; charset=utf-8’)<br>    response.write(‘body{background-color: #ddd;}h1{color: red;}’)<br>    response.end()<br>  }else if(path == ‘/script.html’){<br>    response.setHeader(‘Content-Type’, ‘text/javascript; charset=utf-8’)<br>    response.write(‘alert(“这是JS执行的”)’)<br>    response.end()<br>  }else if(path == ‘/index.css’){<br>    response.setHeader(‘Content-Type’, ‘text/html; charset=utf-8’)<br>    response.write(‘&lt;!DOCTYPE&gt;\n<html>‘  +<br>      ‘<head><link rel="stylesheet" href="/style.js">‘ +<br>      ‘</head><body>‘  +<br>      ‘<h1>你好</h1>‘ +<br>      ‘<script src="/script.html"></script>‘ +<br>      ‘</body></html>‘)<br>    response.end()<br>  }else{<br>    response.statusCode = 404<br>    response.end()<br>  }</p>
+<p>  /<strong><em>**</em></strong> 代码结束，下面不要看 <strong><strong><em>**</em></strong></strong>/<br>})</p>
+<p>server.listen(port)<br>console.log(‘监听 ‘ + port + ‘ 成功\n请用在空中转体720度然后用电饭煲打开 <a href="http://localhost:&#39;" target="_blank" rel="noopener">http://localhost:&#39;</a> + port)</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/29/简易服务器/" data-id="cjhrg25ij0004agkwxjyfmxgx" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/29/简易服务器/" data-id="cjhrj93700003k8kwzbdomrzz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -139,7 +157,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/28/HTTP/" data-id="cjhrg25hh0000agkwthtw7vyh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/28/HTTP/" data-id="cjhrj93780005k8kw18rk3n1t" class="article-share-link">Share</a>
       
       
     </footer>
@@ -181,7 +199,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/28/如何写一篇博客/" data-id="cjhrg25if0003agkwn6ds86dz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/28/如何写一篇博客/" data-id="cjhrj93740004k8kw5lbc22ri" class="article-share-link">Share</a>
       
       
     </footer>
@@ -224,7 +242,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/24/git简述/" data-id="cjhrg25i50001agkwt3fi8i3x" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/24/git简述/" data-id="cjhrj936q0001k8kwo717ul4h" class="article-share-link">Share</a>
       
       
     </footer>
@@ -265,7 +283,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/24/如何使用ls、cat、mv、touch命令以及explainshell-com网站/" data-id="cjhrg25im0005agkw8unjzcsh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/24/如何使用ls、cat、mv、touch命令以及explainshell-com网站/" data-id="cjhrj936x0002k8kw1tas1ij9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -310,7 +328,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/23/hello-world/" data-id="cjhrg25ib0002agkwbnredy8q" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/23/hello-world/" data-id="cjhrj936f0000k8kwjvxalzd6" class="article-share-link">Share</a>
       
       
     </footer>
