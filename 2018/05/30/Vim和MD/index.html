@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Vim和MD | ZheGeWangYeDaBuKai</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一直想写一下MD的语法来让自己加深一下了解，系统整理一下加深记忆。Vim中也有很多问题不明白操作原理、快捷键作用。但两个知识日常中用到的很多，所以总结一下。  Markdown定义Markdown是一种轻量级标记语言（语法格式简单一些），它允许人们使用易读易写的纯文本格式来编写文档，然后转换成有效的XHTML(HTML)文档。[维基百科] 语法图片![图片名称](图片链接) 链接[链接文字](链">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vim和MD">
+<meta property="og:url" content="http://yoursite.com/2018/05/30/Vim和MD/index.html">
+<meta property="og:site_name" content="ZheGeWangYeDaBuKai">
+<meta property="og:description" content="一直想写一下MD的语法来让自己加深一下了解，系统整理一下加深记忆。Vim中也有很多问题不明白操作原理、快捷键作用。但两个知识日常中用到的很多，所以总结一下。  Markdown定义Markdown是一种轻量级标记语言（语法格式简单一些），它允许人们使用易读易写的纯文本格式来编写文档，然后转换成有效的XHTML(HTML)文档。[维基百科] 语法图片![图片名称](图片链接) 链接[链接文字](链">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://raw.githubusercontent.com/chenzhe512/blog-generator/master/image/vim.jpg">
+<meta property="og:updated_time" content="2018-05-30T05:09:57.541Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vim和MD">
+<meta name="twitter:description" content="一直想写一下MD的语法来让自己加深一下了解，系统整理一下加深记忆。Vim中也有很多问题不明白操作原理、快捷键作用。但两个知识日常中用到的很多，所以总结一下。  Markdown定义Markdown是一种轻量级标记语言（语法格式简单一些），它允许人们使用易读易写的纯文本格式来编写文档，然后转换成有效的XHTML(HTML)文档。[维基百科] 语法图片![图片名称](图片链接) 链接[链接文字](链">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/chenzhe512/blog-generator/master/image/vim.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="ZheGeWangYeDaBuKai" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ZheGeWangYeDaBuKai</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Vim和MD" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/30/Vim和MD/" class="article-date">
+  <time datetime="2018-05-30T03:07:17.000Z" itemprop="datePublished">2018-05-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Vim和MD
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>一直想写一下MD的语法来让自己加深一下了解，系统整理一下加深记忆。Vim中也有很多问题不明白操作原理、快捷键作用。但两个知识日常中用到的很多，所以总结一下。</p>
+</blockquote>
+<h1 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>Markdown是一种轻量级标记语言（语法格式简单一些），它允许人们使用易读易写的纯文本格式来编写文档，然后转换成有效的XHTML(HTML)文档。[维基百科]</p>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><p><code>![图片名称](图片链接)</code></p>
+<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p><code>[链接文字](链接地址)</code></p>
+<h3 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h3><p>在文本中输入的换行最终会被删除，浏览器会根据自身需要来进行换行。如果想进行强制换行，可以在结尾<strong>插入至少两个空格再换行</strong>。</p>
+<h3 id="粗斜"><a href="#粗斜" class="headerlink" title="粗斜"></a>粗斜</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*加斜*  _加斜_</span><br><span class="line">**加粗**  __加斜__</span><br><span class="line">***加粗并加斜***</span><br></pre></td></tr></table></figure>
+<h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">……</span><br></pre></td></tr></table></figure>
+<p>（#和标题间有一个空字符）</p>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>在引用的段落前加上右尖括号即可<kbd>&gt;<kbd></kbd></kbd></p>
+<h3 id="水平分区线"><a href="#水平分区线" class="headerlink" title="水平分区线"></a>水平分区线</h3><p>水平分区线可以由三个或三个以上<kbd>*<kbd>、<kbd>-<kbd>和<kbd>_<kbd>来实现，即星号、短横线和下划线。</kbd></kbd></kbd></kbd></kbd></kbd></p>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>无序列表可以由<kbd>*<kbd>、<kbd>-<kbd>、<kbd>+<kbd>中的任意一个符号加空格进行创建。<br>有序列表可以由<strong>数字+点+空格</strong>来创建。</kbd></kbd></kbd></kbd></kbd></kbd></p>
+<h3 id="代码段"><a href="#代码段" class="headerlink" title="代码段"></a>代码段</h3><p>使用<kbd>`<kbd>来实现，开头结尾都要用3个或以上来实现多行代码，要换行。</kbd></kbd></p>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p>使用<kbd>-<kbd>和<kbd>|<kbd>来实现。例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">表头1|表头2|表头3</span><br><span class="line">:----|:-----:|-----:</span><br><span class="line">左对齐|居中对齐|右对齐</span><br></pre></td></tr></table></figure></kbd></kbd></kbd></kbd></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">表头1</th>
+<th style="text-align:center">表头2</th>
+<th style="text-align:right">表头3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">左对齐</td>
+<td style="text-align:center">居中对齐</td>
+<td style="text-align:right">右对齐</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Vim"><a href="#Vim" class="headerlink" title="Vim"></a>Vim</h1><h2 id="基本了解"><a href="#基本了解" class="headerlink" title="基本了解"></a>基本了解</h2><p>Vim(简称vi)分为三种状态，分别是命令模式、插入模式、底行模式。</p>
+<h3 id="命令行模式-command-mode"><a href="#命令行模式-command-mode" class="headerlink" title="命令行模式(command mode)"></a>命令行模式(command mode)</h3><p>控制屏幕光标的移动，字符、字或行的删除，移动复制某区段及进入插入模式(Insert mode)下，或者到底行模式(last line mode)。</p>
+<h3 id="插入模式（Insert-mode）"><a href="#插入模式（Insert-mode）" class="headerlink" title="插入模式（Insert mode）"></a>插入模式（Insert mode）</h3><p>只有在Insert mode下，才可以做文字输入，按「ESC」键可回到命令行模式。</p>
+<h3 id="底行模式-last-line-mode"><a href="#底行模式-last-line-mode" class="headerlink" title="底行模式(last line mode)"></a>底行模式(last line mode)</h3><p>将文件保存或退出vi，也可以设置编辑环境，如寻找字符串、列出行号……等.</p>
+<h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><h3 id="如何进入vi"><a href="#如何进入vi" class="headerlink" title="如何进入vi"></a>如何进入vi</h3><p>在系统提示符号输入vi及文件名称后，就进入vi全屏幕编辑画面<br><code>$ vi myfile</code></p>
+<h3 id="切换至插入模式"><a href="#切换至插入模式" class="headerlink" title="切换至插入模式"></a>切换至插入模式</h3><p>进入vi后是处于命令行模式下，需要切换至插入模式才能编辑文本，在命令行模式下按一下字母「i」就可以进入插入模式。</p>
+<h3 id="删除文字"><a href="#删除文字" class="headerlink" title="删除文字"></a>删除文字</h3><p>处于插入模式下只能一直输入文本，删除文字时需要切换至命令行模式才能进行删除，按一下「ESC」键转到命令行模式再删除文字。</p>
+<h3 id="退出及保存"><a href="#退出及保存" class="headerlink" title="退出及保存"></a>退出及保存</h3><p>在命令行模式下，按一下「：」冒号键进入底行模式，例如：<br>: w filename （输入 「w filename」将文章以指定的文件名filename保存）<br>: wq (输入「wq」，存盘并退出vi)<br>: q! (输入q!， 不存盘强制退出vi)</p>
+<h2 id="vi按键图示"><a href="#vi按键图示" class="headerlink" title="vi按键图示"></a>vi按键图示</h2><p><img src="https://raw.githubusercontent.com/chenzhe512/blog-generator/master/image/vim.jpg" alt="VI"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/05/30/Vim和MD/" data-id="cjhsnjr390001fwkwgtvlshcg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/05/29/简易服务器/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">简易服务器</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/05/30/Vim和MD/">Vim和MD</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/29/简易服务器/">简易服务器</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/28/HTTP/">HTTP</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/28/如何写一篇博客/">如何写一篇博客</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/24/git简述/">git简述</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Chen Zhe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
