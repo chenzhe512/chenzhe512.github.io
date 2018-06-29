@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="ZheGeWangYeDaBuKai">
 <meta property="og:description" content="布局实现左右布局主要通过float: left; + clearfix 来实现的。即：给子元素加float: left;给父元素加clearfix;其中.clearfix::after{    content: ‘’;    display: block;    clear: both;} 居中水平居中 学习后首先想到的水平居中的方法就只有width和margin的结合可以实现居中。做常见的水平居">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-29T05:40:35.217Z">
+<meta property="og:updated_time" content="2018-06-29T05:44:32.561Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS居中">
 <meta name="twitter:description" content="布局实现左右布局主要通过float: left; + clearfix 来实现的。即：给子元素加float: left;给父元素加clearfix;其中.clearfix::after{    content: ‘’;    display: block;    clear: both;} 居中水平居中 学习后首先想到的水平居中的方法就只有width和margin的结合可以实现居中。做常见的水平居">
@@ -102,14 +102,14 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">    height: 100px;</span><br><span class="line">    line-height: 100px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>可以通过给行内元素添加padding-top和padding-bottom来实现垂直居中。</p>
-<h1 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h1><h2 id="脱离文档流"><a href="#脱离文档流" class="headerlink" title="脱离文档流"></a>脱离文档流</h2><p>position：fixd；可以让banner相对于屏幕固定，不占文档流的高度，即脱离文档流；<br>脱离之后文档流会缩起来，解决方法是：width: 100%;<br>使用width: 100%;之后会出现bug，左右100%+padding&gt;父元素宽度<br>解决方法：左右边距变为0，这是宽度真的是100%，重新加一个div，即加给<br><a>和<nav> topNavBar-inner,重新加之后，选择器和浮动都要重新更改；再给新加元素tipNavBar一个padding,因为这个padding是加在topNavBar-inner里面的，所以说宽度最多还是100%，不会超过父元素topNavBar的宽度。</nav></a></p>
+<h1 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h1><h2 id="脱离文档流"><a href="#脱离文档流" class="headerlink" title="脱离文档流"></a>脱离文档流</h2><p>position：fixd；可以让banner相对于屏幕固定，不占文档流的高度，即脱离文档流；<br>脱离之后文档流会缩起来，解决方法是：width: 100%;<br>使用width: 100%;之后会出现bug，左右100%+padding&gt;父元素宽度<br>解决方法：左右边距变为0，这是宽度真的是100%，重新加一个div，即加给<br>topNavBar-inner,重新加之后，选择器和浮动都要重新更改；再给新加元素tipNavBar一个padding,因为这个padding是加在topNavBar-inner里面的，所以说宽度最多还是100%，不会超过父元素topNavBar的宽度。</p>
 </li>
 </ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/28/CSS居中/" data-id="cjizjv22g00018okwbvgrhorg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/28/CSS居中/" data-id="cjizk0nuo0000xgkwwr8fo97m" class="article-share-link">Share</a>
       
       
     </footer>
