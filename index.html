@@ -62,6 +62,63 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-JS数据" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/23/JS数据/" class="article-date">
+  <time datetime="2018-07-23T03:01:56.000Z" itemprop="datePublished">2018-07-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/23/JS数据/">JS数据</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>JS语言的每一个值，都属于某一种数据类型。一共有七种数据类型：Number、String、null、undefined、Boolean、Object、Symbol.</p>
+</blockquote>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><ol>
+<li>Number: 数值即整数和小数；</li>
+<li>String: 字符串即文本；</li>
+<li>null: 表示空值，即此处的值为空；</li>
+<li>undefined: 表示未定义，即目前没有定义，所以此处暂时没有任何值；</li>
+<li>Boolean: 布尔值即表示真伪的两个特殊值，真(true)和伪(false);</li>
+<li>Object: 对象，通常是三个原始类型的值的合成，可以看作是一个存放各种类型的容器；<br>数值、字符串、布尔值这三种类型是最基本的数据类型，所以称为JS的原始类型；而null和undefined是JS数据类型的两个特殊值；对象则称为合成类型，分为三个子类型object（狭义的对象）、数组（array）和函数（function）。<h2 id="如何确定一个值是什么数据类型？"><a href="#如何确定一个值是什么数据类型？" class="headerlink" title="如何确定一个值是什么数据类型？"></a>如何确定一个值是什么数据类型？</h2></li>
+<li>typeof运算符</li>
+<li>instanceof运算符</li>
+<li>Object.prototype.toString方法</li>
+</ol>
+<hr>
+<h1 id="详细了解各种数据类型"><a href="#详细了解各种数据类型" class="headerlink" title="详细了解各种数据类型"></a>详细了解各种数据类型</h1><h2 id="null和undefined"><a href="#null和undefined" class="headerlink" title="null和undefined"></a>null和undefined</h2><p>null和undefined都可以表示‘没有’，含义基本相似。<br>null表示空值，即该处的值现在为空。如果调用函数时，某个参数未设置任何值，这时传入null，表示该值为空；<br>undefinde表示‘未定义’，返回为undefined的有：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//变量声明了，但没有赋值</span><br><span class="line">var i;</span><br><span class="line">i;//undefined</span><br><span class="line">//调用函数时应该提供的参数没有提供，该参数就等于undefined</span><br><span class="line">functionf(x)&#123;</span><br><span class="line">    return x;</span><br><span class="line">&#125;</span><br><span class="line">f()//undefined</span><br><span class="line">//对象没有赋值的属性</span><br><span class="line">var  o = new Object();</span><br><span class="line">o.p //undefined</span><br><span class="line">//函数没有返回值时，默认返回undefined</span><br><span class="line">function f()&#123;&#125;</span><br><span class="line">f()//undefined</span><br></pre></td></tr></table></figure></p>
+<h2 id="Boolean"><a href="#Boolean" class="headerlink" title="Boolean"></a>Boolean</h2><p>布尔值只有true和false两个值。<br>如果JavaScript预期某个位置上是布尔值，会将该位置上现有的值自动转换为布尔值。转换规则是下面六个值转为false，其他值都是true：<br>undefined、null、false、0、NaN、’’、””、document.all。<br>注：’’和””都代表空字符，document.all不常用。<br>    详细查看 MDN falsy</p>
+<h2 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><ol>
+<li>整数和浮点数<br>在JavaScript中，所有数字都是以64为浮点数的形式储存的，整数也是如此。所以1与1.0是相同的代表同一个数。这就是说，在JavaScript的底层根本没有整数，都是以小数的形式即64位浮点数存在的。</li>
+<li>数值精度<br>JavaScript浮点数的64个二进制，从最左边开始是这样组成的：<br>第1位，符号位，0代表正数，1代表负数；<br>第2-12位，指数部分；<br>第13-63位，小数部分；<br>符号代表了一个数的正负，指数部分决定了数的大小，小数部分决定了数值的精度。</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/23/JS数据/" data-id="cjjxrtxw00003bskwv28amtru" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-JS怎么学？" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/07/13/JS怎么学？/" class="article-date">
@@ -89,7 +146,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/13/JS怎么学？/" data-id="cjjjt79wi0000lkkw8vifi0qh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/13/JS怎么学？/" data-id="cjjxrtxvw0002bskwm5a0ype9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -144,7 +201,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/28/CSS居中/" data-id="cjjjt79xe0003lkkwwoj0l2aw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/28/CSS居中/" data-id="cjjxrtxvc0000bskwue5cr1dq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -213,7 +270,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/01/HTML标签/" data-id="cjjjt79xp0005lkkw6hmc4jmh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/01/HTML标签/" data-id="cjjxrtxxx000abskwc9huieqm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -290,7 +347,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/30/Vim和MD/" data-id="cjjjt79x80002lkkwe0x3u949" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/30/Vim和MD/" data-id="cjjxrtxwi0008bskwt1bpr7xp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -338,7 +395,7 @@ UDP不可靠、不面向连接、相对TCP较快。
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/29/简易服务器/" data-id="cjjjt7a0c0009lkkw1qadiplk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/29/简易服务器/" data-id="cjjxrtxwt0009bskwfnpshfh0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -389,7 +446,7 @@ UDP不可靠、不面向连接、相对TCP较快。
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/28/HTTP/" data-id="cjjjt79wz0001lkkwgirkejci" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/28/HTTP/" data-id="cjjxrtxvq0001bskwmbeyu0pq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -431,7 +488,7 @@ UDP不可靠、不面向连接、相对TCP较快。
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/28/如何写一篇博客/" data-id="cjjjt7a040008lkkwxzb356we" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/28/如何写一篇博客/" data-id="cjjxrtxwb0006bskwiqzbwcs3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -474,7 +531,7 @@ UDP不可靠、不面向连接、相对TCP较快。
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/24/git简述/" data-id="cjjjt79xk0004lkkw64q8j3w4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/24/git简述/" data-id="cjjxrtxw80005bskwll3mlo4j" class="article-share-link">Share</a>
       
       
     </footer>
@@ -515,52 +572,7 @@ UDP不可靠、不面向连接、相对TCP较快。
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/24/如何使用ls、cat、mv、touch命令以及explainshell-com网站/" data-id="cjjjt79zv0007lkkwtvz2u8wy" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/05/23/hello-world/" class="article-date">
-  <time datetime="2018-05-23T12:15:27.747Z" itemprop="datePublished">2018-05-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/23/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/23/hello-world/" data-id="cjjjt79zn0006lkkw73se7vjj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/24/如何使用ls、cat、mv、touch命令以及explainshell-com网站/" data-id="cjjxrtxwe0007bskwlm2dlneg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -571,6 +583,11 @@ UDP不可靠、不面向连接、相对TCP较快。
 
   
 
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+  </nav>
 
 </section>
         
@@ -601,6 +618,10 @@ UDP不可靠、不面向连接、相对TCP较快。
       <ul>
         
           <li>
+            <a href="/2018/07/23/JS数据/">JS数据</a>
+          </li>
+        
+          <li>
             <a href="/2018/07/13/JS怎么学？/">JS怎么学？</a>
           </li>
         
@@ -614,10 +635,6 @@ UDP不可靠、不面向连接、相对TCP较快。
         
           <li>
             <a href="/2018/05/30/Vim和MD/">Vim和MD</a>
-          </li>
-        
-          <li>
-            <a href="/2018/05/29/简易服务器/">简易服务器</a>
           </li>
         
       </ul>
