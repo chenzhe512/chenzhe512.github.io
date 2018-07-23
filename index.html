@@ -62,6 +62,62 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-JS数据类型转换" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/23/JS数据类型转换/" class="article-date">
+  <time datetime="2018-07-23T06:25:30.000Z" itemprop="datePublished">2018-07-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/23/JS数据类型转换/">JS数据类型转换</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本文主要介绍JS中数据的类型转换。</p>
+<h1 id="转换为字符串"><a href="#转换为字符串" class="headerlink" title="转换为字符串"></a>转换为字符串</h1><p>String()可以把任意类型的值转换为字符串。</p>
+<h2 id="原始类型值"><a href="#原始类型值" class="headerlink" title="原始类型值"></a>原始类型值</h2><ol>
+<li>数值：转换为相应的字符串；</li>
+<li>字符串：转换后还是原来的值；</li>
+<li>布尔值：true转为字符串’true’，false转为字符串’false’；</li>
+<li>undefined：转为字符串’undefined’；</li>
+<li>null：转为字符串’null’；<h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2>Sting()方法的参数如果是对象，返回一个类型字符串；如果是一个数组，返回该数组的字符串形式；<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String([1, 2, 3])</span><br><span class="line">&quot;1,2,3&quot;</span><br><span class="line">String(&#123;a: 1&#125;)</span><br><span class="line">&quot;[object Object]&quot;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>注：如果是数值和布尔类型的还可以通过number/boolean + ‘’或者’’ + number/boolean来进行转换；<br>window.String()也可以转换为字符串。</p>
+<h1 id="转换为布尔"><a href="#转换为布尔" class="headerlink" title="转换为布尔"></a>转换为布尔</h1><p>Boolean()函数可以将任意类型的值转换为布尔。<br>除了undefined、null、0、NaN以及空字符串的转换结果为false，其他全都为true。<br>注： 也可通过!!()来进行转换。</p>
+<h1 id="转换为数值"><a href="#转换为数值" class="headerlink" title="转换为数值"></a>转换为数值</h1><p>Number()函数可以将任意类型的值转换为数值。</p>
+<h2 id="原始类型的值"><a href="#原始类型的值" class="headerlink" title="原始类型的值"></a>原始类型的值</h2><ol>
+<li>数值：转换后还是原来的值；</li>
+<li>字符串：如果可以转换为数值，则直接转换为数值；如果不能转换为数值，则直接返回NaN；空字符串转换为0；</li>
+<li>布尔值： true转换为1，false转换为0；</li>
+<li>undefined：转换为NaN；</li>
+<li>null：转换为0；<br>注： 还可通过parseInt()和parseFloat()转换为Number；<br>‘1’ - 0和+ ‘-1’ 也可以转换为数值。</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/23/JS数据类型转换/" data-id="cjjxx6brc0005fwkw4utwsmjx" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-JS数据" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/07/23/JS数据/" class="article-date">
@@ -109,7 +165,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/23/JS数据/" data-id="cjjxrtxw00003bskwv28amtru" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/23/JS数据/" data-id="cjjxx6bra0004fwkwd758lpio" class="article-share-link">Share</a>
       
       
     </footer>
@@ -146,7 +202,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/13/JS怎么学？/" data-id="cjjxrtxvw0002bskwm5a0ype9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/13/JS怎么学？/" data-id="cjjxx6br70003fwkwp4fe8rkq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -201,7 +257,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/28/CSS居中/" data-id="cjjxrtxvc0000bskwue5cr1dq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/28/CSS居中/" data-id="cjjxx6bqo0000fwkwarmkeizx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -270,7 +326,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/01/HTML标签/" data-id="cjjxrtxxx000abskwc9huieqm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/01/HTML标签/" data-id="cjjxx6bqy0001fwkw82petgl8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -347,7 +403,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/30/Vim和MD/" data-id="cjjxrtxwi0008bskwt1bpr7xp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/30/Vim和MD/" data-id="cjjxx6brf0006fwkw4l7hfch3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -395,7 +451,7 @@ UDP不可靠、不面向连接、相对TCP较快。
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/29/简易服务器/" data-id="cjjxrtxwt0009bskwfnpshfh0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/29/简易服务器/" data-id="cjjxx6bss000bfwkwh8xcn4rl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -446,7 +502,7 @@ UDP不可靠、不面向连接、相对TCP较快。
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/28/HTTP/" data-id="cjjxrtxvq0001bskwmbeyu0pq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/28/HTTP/" data-id="cjjxx6br30002fwkw5skvshht" class="article-share-link">Share</a>
       
       
     </footer>
@@ -488,7 +544,7 @@ UDP不可靠、不面向连接、相对TCP较快。
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/28/如何写一篇博客/" data-id="cjjxrtxwb0006bskwiqzbwcs3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/28/如何写一篇博客/" data-id="cjjxx6brr000afwkwl1xdkgzf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -531,48 +587,7 @@ UDP不可靠、不面向连接、相对TCP较快。
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/24/git简述/" data-id="cjjxrtxw80005bskwll3mlo4j" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-如何使用ls、cat、mv、touch命令以及explainshell-com网站" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/05/24/如何使用ls、cat、mv、touch命令以及explainshell-com网站/" class="article-date">
-  <time datetime="2018-05-24T02:54:09.000Z" itemprop="datePublished">2018-05-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/24/如何使用ls、cat、mv、touch命令以及explainshell-com网站/">如何使用ls、cat、mv、touch命令以及explainshell.com网站</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文主要通过结合explainshell.com来对ls、cat、mv、touch命令进行解释。</p>
-<h1 id="ls的使用"><a href="#ls的使用" class="headerlink" title="ls的使用"></a><font color="gray" size="8">ls的使用</font></h1><p><img src="https://raw.githubusercontent.com/chenzhe512/blog-generator/master/image/ls.jpg" alt="ls"><br>根据explainshell.com解释，ls命令的含义是列出当前目录内的内容，包括子目录和文件，输入ls就会列出myBlog下的所有目录内容，但不包括隐藏的目录和文件。如下图所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Chenzhe@Chenzhe MINGW64 /d/MyBlog/myBlog (master)</span><br><span class="line">$ ls</span><br><span class="line">_config.yml  image/         package.json       public/    scaffolds/  themes/</span><br><span class="line">db.json      node_modules/  package-lock.json  README.md  source/</span><br></pre></td></tr></table></figure></p>
-<h1 id="cat的使用"><a href="#cat的使用" class="headerlink" title="cat的使用"></a><font color="gray" size="8">cat的使用</font></h1><p><img src="https://raw.githubusercontent.com/chenzhe512/blog-generator/master/image/cat.jpg" alt="cat"><br>根据explainshell.com解释，cat命令的含义是连接文件并打印文件的内容。</p>
-<h1 id="mv的使用"><a href="#mv的使用" class="headerlink" title="mv的使用"></a><font color="gray" size="8">mv的使用</font></h1><p><img src="https://raw.githubusercontent.com/chenzhe512/blog-generator/master/image/mv.jpg" alt="mv"><br>根据explainshell.com解释，mv命令的含义是移动或者重命名文件。</p>
-<h1 id="touch的使用"><a href="#touch的使用" class="headerlink" title="touch的使用"></a><font color="gray" size="8">touch的使用</font></h1><p><img src="https://raw.githubusercontent.com/chenzhe512/blog-generator/master/image/touch.jpg" alt="touch"><br>根据explainshell.com解释，touch命令的含义是更改文件的时间戳。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/24/如何使用ls、cat、mv、touch命令以及explainshell-com网站/" data-id="cjjxrtxwe0007bskwlm2dlneg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/24/git简述/" data-id="cjjxx6bri0007fwkwewnay4sz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -618,6 +633,10 @@ UDP不可靠、不面向连接、相对TCP较快。
       <ul>
         
           <li>
+            <a href="/2018/07/23/JS数据类型转换/">JS数据类型转换</a>
+          </li>
+        
+          <li>
             <a href="/2018/07/23/JS数据/">JS数据</a>
           </li>
         
@@ -631,10 +650,6 @@ UDP不可靠、不面向连接、相对TCP较快。
         
           <li>
             <a href="/2018/06/01/HTML标签/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2018/05/30/Vim和MD/">Vim和MD</a>
           </li>
         
       </ul>

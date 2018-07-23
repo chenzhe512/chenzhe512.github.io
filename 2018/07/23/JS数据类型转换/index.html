@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>JS数据类型转换 | ZheGeWangYeDaBuKai</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="本文主要介绍JS中数据的类型转换。 转换为字符串String()可以把任意类型的值转换为字符串。 原始类型值 数值：转换为相应的字符串； 字符串：转换后还是原来的值； 布尔值：true转为字符串’true’，false转为字符串’false’； undefined：转为字符串’undefined’； null：转为字符串’null’；对象Sting()方法的参数如果是对象，返回一个类型字符串；如果">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS数据类型转换">
+<meta property="og:url" content="http://yoursite.com/2018/07/23/JS数据类型转换/index.html">
+<meta property="og:site_name" content="ZheGeWangYeDaBuKai">
+<meta property="og:description" content="本文主要介绍JS中数据的类型转换。 转换为字符串String()可以把任意类型的值转换为字符串。 原始类型值 数值：转换为相应的字符串； 字符串：转换后还是原来的值； 布尔值：true转为字符串’true’，false转为字符串’false’； undefined：转为字符串’undefined’； null：转为字符串’null’；对象Sting()方法的参数如果是对象，返回一个类型字符串；如果">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-23T06:57:24.040Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JS数据类型转换">
+<meta name="twitter:description" content="本文主要介绍JS中数据的类型转换。 转换为字符串String()可以把任意类型的值转换为字符串。 原始类型值 数值：转换为相应的字符串； 字符串：转换后还是原来的值； 布尔值：true转为字符串’true’，false转为字符串’false’； undefined：转为字符串’undefined’； null：转为字符串’null’；对象Sting()方法的参数如果是对象，返回一个类型字符串；如果">
+  
+    <link rel="alternate" href="/atom.xml" title="ZheGeWangYeDaBuKai" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ZheGeWangYeDaBuKai</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-JS数据类型转换" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/23/JS数据类型转换/" class="article-date">
+  <time datetime="2018-07-23T06:25:30.000Z" itemprop="datePublished">2018-07-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JS数据类型转换
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本文主要介绍JS中数据的类型转换。</p>
+<h1 id="转换为字符串"><a href="#转换为字符串" class="headerlink" title="转换为字符串"></a>转换为字符串</h1><p>String()可以把任意类型的值转换为字符串。</p>
+<h2 id="原始类型值"><a href="#原始类型值" class="headerlink" title="原始类型值"></a>原始类型值</h2><ol>
+<li>数值：转换为相应的字符串；</li>
+<li>字符串：转换后还是原来的值；</li>
+<li>布尔值：true转为字符串’true’，false转为字符串’false’；</li>
+<li>undefined：转为字符串’undefined’；</li>
+<li>null：转为字符串’null’；<h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2>Sting()方法的参数如果是对象，返回一个类型字符串；如果是一个数组，返回该数组的字符串形式；<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String([1, 2, 3])</span><br><span class="line">&quot;1,2,3&quot;</span><br><span class="line">String(&#123;a: 1&#125;)</span><br><span class="line">&quot;[object Object]&quot;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>注：如果是数值和布尔类型的还可以通过number/boolean + ‘’或者’’ + number/boolean来进行转换；<br>window.String()也可以转换为字符串。</p>
+<h1 id="转换为布尔"><a href="#转换为布尔" class="headerlink" title="转换为布尔"></a>转换为布尔</h1><p>Boolean()函数可以将任意类型的值转换为布尔。<br>除了undefined、null、0、NaN以及空字符串的转换结果为false，其他全都为true。<br>注： 也可通过!!()来进行转换。</p>
+<h1 id="转换为数值"><a href="#转换为数值" class="headerlink" title="转换为数值"></a>转换为数值</h1><p>Number()函数可以将任意类型的值转换为数值。</p>
+<h2 id="原始类型的值"><a href="#原始类型的值" class="headerlink" title="原始类型的值"></a>原始类型的值</h2><ol>
+<li>数值：转换后还是原来的值；</li>
+<li>字符串：如果可以转换为数值，则直接转换为数值；如果不能转换为数值，则直接返回NaN；空字符串转换为0；</li>
+<li>布尔值： true转换为1，false转换为0；</li>
+<li>undefined：转换为NaN；</li>
+<li>null：转换为0；<br>注： 还可通过parseInt()和parseFloat()转换为Number；<br>‘1’ - 0和+ ‘-1’ 也可以转换为数值。</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/23/JS数据类型转换/" data-id="cjjxx6brc0005fwkw4utwsmjx" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/23/JS数据/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">JS数据</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/07/23/JS数据类型转换/">JS数据类型转换</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/23/JS数据/">JS数据</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/13/JS怎么学？/">JS怎么学？</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/28/CSS居中/">CSS居中</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/01/HTML标签/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Chen Zhe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
