@@ -62,6 +62,49 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-git简述" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/24/git简述/" class="article-date">
+  <time datetime="2018-05-24T10:32:51.000Z" itemprop="datePublished">2018-05-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/24/git简述/">git简述</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a><font color="black" size="8">Git</font></h1><p><img src="https://raw.githubusercontent.com/chenzhe512/blog-generator/master/image/git.png" alt=""><br>刚接触git一周左右的时间，看到这幅阮一峰老师的图片，感觉可以很清晰的解释git一些基本操作指令之间的关系，也说一下自己的了解：首先在本地先初始化或者新建一个仓库（用git init命令），git add是将自己在工作区的变动提交到暂存区，git commit是将暂存区的内容提交到本地仓库。至此，自己所进行的操作已经储存在了本地仓库。</p>
+<h1 id="git-init"><a href="#git-init" class="headerlink" title="git init"></a>git init</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br><span class="line">Initialized empty Git repository in C:/Users/Administrator/Desktop/music/.git/</span><br></pre></td></tr></table></figure>
+<p>初始化的空git仓库已经建立在C:/Users/Administrator/Desktop/music/.git/</p>
+<h1 id="git-add"><a href="#git-add" class="headerlink" title="git add"></a>git add</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Chenzhe@Chenzhe MINGW64 ~/desktop/music (master)</span><br><span class="line">$ touch 666.txt</span><br><span class="line">Chenzhe@Chenzhe MINGW64 ~/desktop/music (master)</span><br><span class="line">$ git add 666.txt</span><br></pre></td></tr></table></figure>
+<p>创建一个666.txt的txt文件，并将其提交到暂存区</p>
+<h1 id="git-commit"><a href="#git-commit" class="headerlink" title="git commit"></a>git commit</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git commit 666.txt -m &quot;将666.txt从暂存区提交到本地仓库&quot;</span><br><span class="line">[master (root-commit) 24b7b50] 将666.txt从暂存区提交到本地仓库</span><br><span class="line"> 1 file changed, 0 insertions(+), 0 deletions(-)</span><br><span class="line"> create mode 100644 666.txt</span><br></pre></td></tr></table></figure>
+<p>把暂存区的666.txt提交到本地仓库</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/05/24/git简述/" data-id="cjk2mbwek000874kwv32nle5s" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-如何使用ls、cat、mv、touch命令以及explainshell-com网站" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/05/24/如何使用ls、cat、mv、touch命令以及explainshell-com网站/" class="article-date">
@@ -93,7 +136,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/24/如何使用ls、cat、mv、touch命令以及explainshell-com网站/" data-id="cjjxx6brp0009fwkwi7lpx0m2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/24/如何使用ls、cat、mv、touch命令以及explainshell-com网站/" data-id="cjk2mbwey000a74kwhdlbl9py" class="article-share-link">Share</a>
       
       
     </footer>
@@ -138,7 +181,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/23/hello-world/" data-id="cjjxx6brk0008fwkwwor8mj2y" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/23/hello-world/" data-id="cjk2mbwes000974kw890j1281" class="article-share-link">Share</a>
       
       
     </footer>
@@ -184,6 +227,10 @@
       <ul>
         
           <li>
+            <a href="/2018/07/26/Tween-缓动/">Tween-缓动</a>
+          </li>
+        
+          <li>
             <a href="/2018/07/23/JS数据类型转换/">JS数据类型转换</a>
           </li>
         
@@ -197,10 +244,6 @@
         
           <li>
             <a href="/2018/06/28/CSS居中/">CSS居中</a>
-          </li>
-        
-          <li>
-            <a href="/2018/06/01/HTML标签/">(no title)</a>
           </li>
         
       </ul>
