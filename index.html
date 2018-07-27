@@ -62,6 +62,52 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-原型及原型链" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/27/原型及原型链/" class="article-date">
+  <time datetime="2018-07-27T02:41:46.000Z" itemprop="datePublished">2018-07-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/27/原型及原型链/">原型及原型链</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>原型及原型链</p>
+</blockquote>
+<h1 id="原型和原型链"><a href="#原型和原型链" class="headerlink" title="原型和原型链"></a>原型和原型链</h1><p>首先新建一个对象：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> var obj = &#123;name: &apos;chenzhe&apos;&#125;</span><br><span class="line"> obj.valueOf()</span><br><span class="line"> &#123;name: &quot;chenzhe&quot;&#125;</span><br><span class="line"> name:&quot;chenzhe&quot;</span><br><span class="line">__proto__:Object</span><br></pre></td></tr></table></figure></p>
+<h2 id="在通过valueOf-返回新对象obj的原始值时，发现：除了name属性外还有一个proto属性，为什么在没有赋予的情况下存在这个proto属性呢？"><a href="#在通过valueOf-返回新对象obj的原始值时，发现：除了name属性外还有一个proto属性，为什么在没有赋予的情况下存在这个proto属性呢？" class="headerlink" title="在通过valueOf()返回新对象obj的原始值时，发现：除了name属性外还有一个proto属性，为什么在没有赋予的情况下存在这个proto属性呢？"></a>在通过valueOf()返回新对象obj的原始值时，发现：除了name属性外还有一个<strong>proto</strong>属性，为什么在没有赋予的情况下存在这个<strong>proto</strong>属性呢？</h2><p>window的属性包括ECMAScript规定的属性和浏览器(Chrome、FireFox)私有的属性.<br>ECMAScript规定的包括Number()、String()、Boolean()、Object()等。浏览器私有的属性有alert、prompt、confirm、console等。<br>如果创建一个数值的数据，对于数值的数据类型来说，都存在toExponential()、toFixed()、toPrecision()等一些公有属性。在存入内存时，把多个数值的多个相同的属性分别保存在不同的内存中的话，就会造成内存的浪费。<br>相对简单的解决办法就是把这些公有的属性存在一个固定的内存prototype中，然后在数据的引用时用一个属性<strong>proto</strong>代替,这样在声明一个数据时都有一个<strong>proto</strong>属性指向prototype这个数据的公有的属性，避免内存的浪费。</p>
+<h2 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a>prototype</h2><p>原型可以理解为，每一个JavaScript对象在创建的时候都会关联它的公有属性的对象，这个具有公有属性的对象就是原型，每一个对象在创建时都会从它的原型’继承’属性。</p>
+<h2 id="proto"><a href="#proto" class="headerlink" title="proto"></a><strong>proto</strong></h2><p>每一个对象在创建后都有一个属性<strong>proto</strong>，这个属性指向该对象的原型。</p>
+<h2 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a>constructor</h2><h2 id="constructor，每个原型都有一个-constructor-属性指向关联的构造函数。"><a href="#constructor，每个原型都有一个-constructor-属性指向关联的构造函数。" class="headerlink" title="constructor，每个原型都有一个 constructor 属性指向关联的构造函数。"></a>constructor，每个原型都有一个 constructor 属性指向关联的构造函数。</h2><p>由此我们得到第结论：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var 对象=new 函数()</span><br><span class="line">对象.__proto__ === 函数.prototype</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function a()&#123;&#125;</span><br><span class="line">a === a.prototype.constructor</span><br><span class="line">true</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2018/07/27/5b5a94db94443.png" alt=""><br><img src="https://i.loli.net/2018/07/27/5b5a95ee63603.png" alt=""></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/27/原型及原型链/" data-id="cjk3gj50e000b0wkw1bjg27j2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Tween-缓动" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/07/26/Tween-缓动/" class="article-date">
@@ -102,7 +148,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/26/Tween-缓动/" data-id="cjk2mbwe8000674kww4xq7zdr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/26/Tween-缓动/" data-id="cjk3gj4za00040wkwlfukfsf9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -158,7 +204,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/23/JS数据类型转换/" data-id="cjk2mbwe3000574kw9w5j7uxu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/23/JS数据类型转换/" data-id="cjk3gj4ze00050wkw76mdnro6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -215,7 +261,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/23/JS数据/" data-id="cjk2mbwdx000474kw5xvmrdzi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/23/JS数据/" data-id="cjk3gj4zz00090wkw63z6rw0z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -252,7 +298,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/13/JS怎么学？/" data-id="cjk2mbwdr000374kweghaa3nh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/13/JS怎么学？/" data-id="cjk3gj4z500030wkw7qc2ggxa" class="article-share-link">Share</a>
       
       
     </footer>
@@ -307,7 +353,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/28/CSS居中/" data-id="cjk2mbwcg000074kw7t0ik420" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/28/CSS居中/" data-id="cjk3gj4z000020wkwxkdwzbtd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -376,7 +422,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/01/HTML标签/" data-id="cjk2mbwd1000174kwwddb8r30" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/01/HTML标签/" data-id="cjk3gj4yb00000wkwn3kfokxp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -453,7 +499,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/30/Vim和MD/" data-id="cjk2mbwee000774kwy2fgypbk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/30/Vim和MD/" data-id="cjk3gj4zj00060wkw7lgf03hg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -501,7 +547,7 @@ UDP不可靠、不面向连接、相对TCP较快。
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/29/简易服务器/" data-id="cjk2mbwg5000c74kwftme4jvg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/29/简易服务器/" data-id="cjk3gj523000d0wkwtmsdpmaf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -552,49 +598,7 @@ UDP不可靠、不面向连接、相对TCP较快。
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/28/HTTP/" data-id="cjk2mbwdk000274kwo2htxrtc" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-如何写一篇博客" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/05/28/如何写一篇博客/" class="article-date">
-  <time datetime="2018-05-28T04:28:59.000Z" itemprop="datePublished">2018-05-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/28/如何写一篇博客/">如何写一篇博客</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="使用Hexo-GitHub-搭建一个博客"><a href="#使用Hexo-GitHub-搭建一个博客" class="headerlink" title="使用Hexo + GitHub 搭建一个博客"></a>使用Hexo + GitHub 搭建一个博客</h2><p>0.选择一个自己存放博客文件的目录来作为仓库/d/MyBlog/myBlog<br>1.在Github上创建一个新仓库repo来作为博客，命名为[你的用户名.github.io],你的用户名为github的用户名<br>2.npm install -g hexo-cli，安装 Hexo<br>3.hexo init myBlog<br>4.cd myBlog<br>5.npm i<br>6.hexo new 如何写一篇博客，创建第一个博客，一个.md文件，类似于：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new 如何写一篇博客</span><br><span class="line">INFO  Created: D:\MyBlog\myBlog\source\_posts\如何写一篇博客.md</span><br></pre></td></tr></table></figure></p>
-<p>7.start ./source/_posts/如何写一篇博客.md,编辑自己的第一篇博客<br>8.start _config.yml，编辑网站配置<br>    Ⅰ.把第 6 行的 title 改成自己博客的主名<br>    Ⅱ.把第 9 行的 author 改成自己的名字<br>    Ⅲ.把最后一行的 type 改成 type: git<br>    Ⅳ.在最后一行后面新增一行，左边与 type 平齐，加上一行 repo: 仓库地址 （请将仓库地址改为「你的用户名.github.io」对应的仓库地址，仓库地址以 <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>: 开头你知道吧？不知道？不知道的话现在你知道了）repo:后面有个空格<br>9.npm install hexo-deployer-git –save，安装 git 部署插件<br>10.hexo deploy<br>11.进入「你的用户名.github.io」对应的 repo，打开 GitHub Pages 功能<br>12.进入「你的用户名.github.io」，就可以查看博客</p>
-<h2 id="开始写博客"><a href="#开始写博客" class="headerlink" title="开始写博客"></a>开始写博客</h2><p>在完成搭建博客之后，接下来如果想写博客的话只需要四步就可完成<br>1.hexo new 博客标题<br>2.start 路径<br>3.hexo generate<br>4.hexo deploy</p>
-<h1 id="问题补充"><a href="#问题补充" class="headerlink" title="问题补充"></a>问题补充</h1><h2 id="路径问题"><a href="#路径问题" class="headerlink" title="路径问题"></a>路径问题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Chenzhe@Chenzhe MINGW64 ~/desktop (master)</span><br><span class="line">$ cd ~/d/MyBlog/myBlog</span><br><span class="line">bash: cd: /c/Users/Administrator/d/MyBlog/myBlog: No such file or directory</span><br><span class="line">Chenzhe@Chenzhe MINGW64 ~/desktop (master)</span><br><span class="line">$ cd /d/MyBlog/myBlog</span><br></pre></td></tr></table></figure>
-<p>第一个出错的原因，~代表的是用户目录即/c/Users/Administrator（Windows环境下）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Chenzhe@Chenzhe MINGW64 ~/desktop (master)</span><br><span class="line">$ cd d/MyBlog/myBlog</span><br><span class="line">bash: cd: d/MyBlog/myBlog: No such file or directory</span><br><span class="line">Chenzhe@Chenzhe MINGW64 ~/desktop (master)</span><br><span class="line">$ cd /d/MyBlog/myBlog</span><br></pre></td></tr></table></figure></p>
-<p>第二个出错的原因，/代表的是所有目录，.代表的是当前目录，..代表附目录<br>所以说如果想进入D盘的话，必须是cd /d/…,而不能是cd d/…<br>出现这两个问题的原因是【忘了】，所以应该经常写博客记录自己的学习内容，加深记忆</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/28/如何写一篇博客/" data-id="cjk2mbwfz000b74kws6sb2fim" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/28/HTTP/" data-id="cjk3gj4ys00010wkwd4ibix79" class="article-share-link">Share</a>
       
       
     </footer>
@@ -640,6 +644,10 @@ UDP不可靠、不面向连接、相对TCP较快。
       <ul>
         
           <li>
+            <a href="/2018/07/27/原型及原型链/">原型及原型链</a>
+          </li>
+        
+          <li>
             <a href="/2018/07/26/Tween-缓动/">Tween-缓动</a>
           </li>
         
@@ -653,10 +661,6 @@ UDP不可靠、不面向连接、相对TCP较快。
         
           <li>
             <a href="/2018/07/13/JS怎么学？/">JS怎么学？</a>
-          </li>
-        
-          <li>
-            <a href="/2018/06/28/CSS居中/">CSS居中</a>
           </li>
         
       </ul>

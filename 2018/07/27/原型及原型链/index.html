@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>原型及原型链 | ZheGeWangYeDaBuKai</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="原型及原型链  原型和原型链首先新建一个对象：12345 var obj = &amp;#123;name: &amp;apos;chenzhe&amp;apos;&amp;#125; obj.valueOf() &amp;#123;name: &amp;quot;chenzhe&amp;quot;&amp;#125; name:&amp;quot;chenzhe&amp;quot;__proto__:Object 在通过valueOf()返回新对象obj的原始值时，发现：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="原型及原型链">
+<meta property="og:url" content="http://yoursite.com/2018/07/27/原型及原型链/index.html">
+<meta property="og:site_name" content="ZheGeWangYeDaBuKai">
+<meta property="og:description" content="原型及原型链  原型和原型链首先新建一个对象：12345 var obj = &amp;#123;name: &amp;apos;chenzhe&amp;apos;&amp;#125; obj.valueOf() &amp;#123;name: &amp;quot;chenzhe&amp;quot;&amp;#125; name:&amp;quot;chenzhe&amp;quot;__proto__:Object 在通过valueOf()返回新对象obj的原始值时，发现：">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://i.loli.net/2018/07/27/5b5a94db94443.png">
+<meta property="og:image" content="https://i.loli.net/2018/07/27/5b5a95ee63603.png">
+<meta property="og:updated_time" content="2018-07-27T03:53:39.523Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="原型及原型链">
+<meta name="twitter:description" content="原型及原型链  原型和原型链首先新建一个对象：12345 var obj = &amp;#123;name: &amp;apos;chenzhe&amp;apos;&amp;#125; obj.valueOf() &amp;#123;name: &amp;quot;chenzhe&amp;quot;&amp;#125; name:&amp;quot;chenzhe&amp;quot;__proto__:Object 在通过valueOf()返回新对象obj的原始值时，发现：">
+<meta name="twitter:image" content="https://i.loli.net/2018/07/27/5b5a94db94443.png">
+  
+    <link rel="alternate" href="/atom.xml" title="ZheGeWangYeDaBuKai" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ZheGeWangYeDaBuKai</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-原型及原型链" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/27/原型及原型链/" class="article-date">
+  <time datetime="2018-07-27T02:41:46.000Z" itemprop="datePublished">2018-07-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      原型及原型链
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>原型及原型链</p>
+</blockquote>
+<h1 id="原型和原型链"><a href="#原型和原型链" class="headerlink" title="原型和原型链"></a>原型和原型链</h1><p>首先新建一个对象：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> var obj = &#123;name: &apos;chenzhe&apos;&#125;</span><br><span class="line"> obj.valueOf()</span><br><span class="line"> &#123;name: &quot;chenzhe&quot;&#125;</span><br><span class="line"> name:&quot;chenzhe&quot;</span><br><span class="line">__proto__:Object</span><br></pre></td></tr></table></figure></p>
+<h2 id="在通过valueOf-返回新对象obj的原始值时，发现：除了name属性外还有一个proto属性，为什么在没有赋予的情况下存在这个proto属性呢？"><a href="#在通过valueOf-返回新对象obj的原始值时，发现：除了name属性外还有一个proto属性，为什么在没有赋予的情况下存在这个proto属性呢？" class="headerlink" title="在通过valueOf()返回新对象obj的原始值时，发现：除了name属性外还有一个proto属性，为什么在没有赋予的情况下存在这个proto属性呢？"></a>在通过valueOf()返回新对象obj的原始值时，发现：除了name属性外还有一个<strong>proto</strong>属性，为什么在没有赋予的情况下存在这个<strong>proto</strong>属性呢？</h2><p>window的属性包括ECMAScript规定的属性和浏览器(Chrome、FireFox)私有的属性.<br>ECMAScript规定的包括Number()、String()、Boolean()、Object()等。浏览器私有的属性有alert、prompt、confirm、console等。<br>如果创建一个数值的数据，对于数值的数据类型来说，都存在toExponential()、toFixed()、toPrecision()等一些公有属性。在存入内存时，把多个数值的多个相同的属性分别保存在不同的内存中的话，就会造成内存的浪费。<br>相对简单的解决办法就是把这些公有的属性存在一个固定的内存prototype中，然后在数据的引用时用一个属性<strong>proto</strong>代替,这样在声明一个数据时都有一个<strong>proto</strong>属性指向prototype这个数据的公有的属性，避免内存的浪费。</p>
+<h2 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a>prototype</h2><p>原型可以理解为，每一个JavaScript对象在创建的时候都会关联它的公有属性的对象，这个具有公有属性的对象就是原型，每一个对象在创建时都会从它的原型’继承’属性。</p>
+<h2 id="proto"><a href="#proto" class="headerlink" title="proto"></a><strong>proto</strong></h2><p>每一个对象在创建后都有一个属性<strong>proto</strong>，这个属性指向该对象的原型。</p>
+<h2 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a>constructor</h2><h2 id="constructor，每个原型都有一个-constructor-属性指向关联的构造函数。"><a href="#constructor，每个原型都有一个-constructor-属性指向关联的构造函数。" class="headerlink" title="constructor，每个原型都有一个 constructor 属性指向关联的构造函数。"></a>constructor，每个原型都有一个 constructor 属性指向关联的构造函数。</h2><p>由此我们得到第结论：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var 对象=new 函数()</span><br><span class="line">对象.__proto__ === 函数.prototype</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function a()&#123;&#125;</span><br><span class="line">a === a.prototype.constructor</span><br><span class="line">true</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2018/07/27/5b5a94db94443.png" alt=""><br><img src="https://i.loli.net/2018/07/27/5b5a95ee63603.png" alt=""></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/27/原型及原型链/" data-id="cjk3gj50e000b0wkw1bjg27j2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/26/Tween-缓动/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Tween-缓动</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/07/27/原型及原型链/">原型及原型链</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/26/Tween-缓动/">Tween-缓动</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/23/JS数据类型转换/">JS数据类型转换</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/23/JS数据/">JS数据</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/13/JS怎么学？/">JS怎么学？</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Chen Zhe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
