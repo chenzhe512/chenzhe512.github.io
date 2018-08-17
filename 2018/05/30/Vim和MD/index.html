@@ -1,94 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-cmn-Hans">
 <head>
-  <meta charset="utf-8">
-  
-
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Vim和MD | ZheGeWangYeDaBuKai</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一直想写一下MD的语法来让自己加深一下了解，系统整理一下加深记忆。Vim中也有很多问题不明白操作原理、快捷键作用。但两个知识日常中用到的很多，所以总结一下。  Markdown定义Markdown是一种轻量级标记语言（语法格式简单一些），它允许人们使用易读易写的纯文本格式来编写文档，然后转换成有效的XHTML(HTML)文档。[维基百科] 语法图片![图片名称](图片链接) 链接[链接文字](链">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Vim和MD">
-<meta property="og:url" content="http://yoursite.com/2018/05/30/Vim和MD/index.html">
-<meta property="og:site_name" content="ZheGeWangYeDaBuKai">
-<meta property="og:description" content="一直想写一下MD的语法来让自己加深一下了解，系统整理一下加深记忆。Vim中也有很多问题不明白操作原理、快捷键作用。但两个知识日常中用到的很多，所以总结一下。  Markdown定义Markdown是一种轻量级标记语言（语法格式简单一些），它允许人们使用易读易写的纯文本格式来编写文档，然后转换成有效的XHTML(HTML)文档。[维基百科] 语法图片![图片名称](图片链接) 链接[链接文字](链">
-<meta property="og:locale" content="default">
-<meta property="og:image" content="https://raw.githubusercontent.com/chenzhe512/blog-generator/master/image/vim.jpg">
-<meta property="og:updated_time" content="2018-05-30T05:09:57.541Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vim和MD">
-<meta name="twitter:description" content="一直想写一下MD的语法来让自己加深一下了解，系统整理一下加深记忆。Vim中也有很多问题不明白操作原理、快捷键作用。但两个知识日常中用到的很多，所以总结一下。  Markdown定义Markdown是一种轻量级标记语言（语法格式简单一些），它允许人们使用易读易写的纯文本格式来编写文档，然后转换成有效的XHTML(HTML)文档。[维基百科] 语法图片![图片名称](图片链接) 链接[链接文字](链">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/chenzhe512/blog-generator/master/image/vim.jpg">
-  
-    <link rel="alternate" href="/atom.xml" title="ZheGeWangYeDaBuKai" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
   
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
+  <!--link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.10.0/styles/github-gist.min.css"-->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.10.0/styles/github-gist.min.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">ZheGeWangYeDaBuKai</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+<div class="Shell">
+    <aside class='SideBar'>
+    <section class='avatar' style="background-image: url()">
+        <div class='av-pic' style="background-image: url()">
+        </div>
+    </section>
+    <section class='menu'>
+        <div>ZheGeWangYeDaBuKai</div>
         
-          <a class="main-nav-link" href="/">Home</a>
+        <ul>
+          
+            <a href="/" class="Btn">
+              <li>Home</li>
+            </a>  
+          
+            <a href="/archives/" class="Btn">
+              <li>Archive</li>
+            </a>  
+          
+        </ul>
+    </section>
+    <section class="media">
         
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-Vim和MD" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/05/30/Vim和MD/" class="article-date">
-  <time datetime="2018-05-30T03:07:17.000Z" itemprop="datePublished">2018-05-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Vim和MD
-    </h1>
-  
+    </section>
+</aside>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
+    <div class="container">
+        <div data-pager-shell>
+            <div>
+  <article class='ContentView'>
+    <header class='PageTitle'>
+        <h1>Vim和MD</h1>
+    </header>
+
+    <section>
+      <blockquote>
 <p>一直想写一下MD的语法来让自己加深一下了解，系统整理一下加深记忆。Vim中也有很多问题不明白操作原理、快捷键作用。但两个知识日常中用到的很多，所以总结一下。</p>
 </blockquote>
 <h1 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>Markdown是一种轻量级标记语言（语法格式简单一些），它允许人们使用易读易写的纯文本格式来编写文档，然后转换成有效的XHTML(HTML)文档。[维基百科]</p>
@@ -130,124 +91,47 @@
 <h3 id="退出及保存"><a href="#退出及保存" class="headerlink" title="退出及保存"></a>退出及保存</h3><p>在命令行模式下，按一下「：」冒号键进入底行模式，例如：<br>: w filename （输入 「w filename」将文章以指定的文件名filename保存）<br>: wq (输入「wq」，存盘并退出vi)<br>: q! (输入q!， 不存盘强制退出vi)</p>
 <h2 id="vi按键图示"><a href="#vi按键图示" class="headerlink" title="vi按键图示"></a>vi按键图示</h2><p><img src="https://raw.githubusercontent.com/chenzhe512/blog-generator/master/image/vim.jpg" alt="VI"></p>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/30/Vim和MD/" data-id="cjkxit2920009lokwn52mcg3q" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2018/06/01/HTML标签/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2018/05/29/简易服务器/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">简易服务器</div>
-    </a>
-  
-</nav>
 
-  
+      
+
+    </section>
+    
+      <section class='ArticleMeta'>
+          <div>
+            发布于&nbsp;
+            <time datetime="2018-05-30T03:07:17.000Z" itemprop="datePublished">
+              2018-05-30
+            </time>
+          </div>
+          
+      </section>
+    
+    
 </article>
 
-</section>
-        
-          <aside id="sidebar">
   
-    
+</div>
 
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li></ul>
+            <footer>
+    <div>© 2018 - Chen Zhe </div>
+    <div>
+        <span>
+            Powered by <a href="https://hexo.io">Hexo</a>
+        </span>
+        ,
+        <span>
+            Theme - <a href="https://github.com/nameoverflow/hexo-theme-icalm">Icalm</a>
+        </span>
     </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2018/08/15/JSON/">JSON</a>
-          </li>
-        
-          <li>
-            <a href="/2018/08/14/DOM事件/">DOM事件</a>
-          </li>
-        
-          <li>
-            <a href="/2018/08/10/jQuery/">jQuery</a>
-          </li>
-        
-          <li>
-            <a href="/2018/07/27/CSS学习之Selectors、animation等/">CSS学习之Selectors、animation等</a>
-          </li>
-        
-          <li>
-            <a href="/2018/07/27/原型及原型链/">原型及原型链</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2018 Chen Zhe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
 </footer>
+
+        </div>
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
+</div>
+<script src="/js/pager/dist/singlepager.js"></script>
+<script>
+var sp = new Pager('data-pager-shell')
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-
-
-  </div>
+</script>
 </body>
 </html>
