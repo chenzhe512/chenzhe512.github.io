@@ -49,6 +49,51 @@
       <article class='ListView'>
     <header class="title">
       
+        <h1>
+          <a href="/2018/06/28/CSS居中/">CSS居中</a>
+        </h1>
+      
+      <div class='ListMeta'>
+  <time datetime="2018-06-28T08:24:56.000Z" itemprop="datePublished">
+    2018-06-28
+  </time>
+  
+  
+</div>
+
+    </header>
+    <div>
+      
+        <h1 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h1><p>实现左右布局主要通过float: left; + clearfix 来实现的。即：<br>给子元素加float: left;<br>给父元素加clearfix;<br>其中<br>.clearfix::after{<br>    content: ‘’;<br>    display: block;<br>    clear: both;<br>}</p>
+<h1 id="居中"><a href="#居中" class="headerlink" title="居中"></a>居中</h1><h2 id="水平居中"><a href="#水平居中" class="headerlink" title="水平居中"></a>水平居中</h2><ol>
+<li>学习后首先想到的水平居中的方法就只有width和margin的结合可以实现居中。<br>做常见的水平居中：给div定义一个宽度，然后配合margin的左右值为auto来实现效果；<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    margin: 0 auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>方法简单易懂，浏览器兼容强，但扩展性差，就是说你在不知道width的情况下很难进行。</p>
+<ol start="2">
+<li>在块级父元素中让行内元素居中，只需使用text-align: center;<br><code>text-align: center;</code><br>这种方法可以让inline/inline-blcok/inline-table/flex等类型的元素实现居中。<h2 id="垂直居中"><a href="#垂直居中" class="headerlink" title="垂直居中"></a>垂直居中</h2><h3 id="块级元素的垂直居中"><a href="#块级元素的垂直居中" class="headerlink" title="块级元素的垂直居中"></a>块级元素的垂直居中</h3>如果说已知块级元素的高度：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">.parent &#123;</span><br><span class="line">    position: relative;</span><br><span class="line">    width: 300px;</span><br><span class="line">    height: 300px;</span><br><span class="line">    border: 1px solid red;</span><br><span class="line">&#125; </span><br><span class="line">.child &#123;</span><br><span class="line">    position: absolute; </span><br><span class="line">    top: 50%; </span><br><span class="line">    height: 100px; </span><br><span class="line">    margin-top: -50px;</span><br><span class="line">    border: 1px solid red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>如果说未知块级元素的高度：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">.parent&#123;</span><br><span class="line">  position: relative;</span><br><span class="line">  height: 500px;</span><br><span class="line">  width: 500px;</span><br><span class="line">  border: 1px solid red;</span><br><span class="line">&#125;</span><br><span class="line">.child&#123;</span><br><span class="line">  position: absolute;</span><br><span class="line">  top: 50%;</span><br><span class="line">  transform: translateY(-50%);</span><br><span class="line">  border: 1px solid red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="行内元素的垂直居中"><a href="#行内元素的垂直居中" class="headerlink" title="行内元素的垂直居中"></a>行内元素的垂直居中</h3><ol>
+<li><p>文字的垂直居中只需将行高与高度设置为相等就可以实现。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">    height: 100px;</span><br><span class="line">    line-height: 100px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>可以通过给行内元素添加padding-top和padding-bottom来实现垂直居中。</p>
+<h1 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h1><h2 id="脱离文档流"><a href="#脱离文档流" class="headerlink" title="脱离文档流"></a>脱离文档流</h2><p>position：fixd；可以让banner相对于屏幕固定，不占文档流的高度，即脱离文档流；<br>脱离之后文档流会缩起来，解决方法是：width: 100%;<br>使用width: 100%;之后会出现bug，左右100%+padding&gt;父元素宽度<br>解决方法：左右边距变为0，这是宽度真的是100%，重新加一个div，即加给<br>topNavBar-inner,重新加之后，选择器和浮动都要重新更改；再给新加元素tipNavBar一个padding,因为这个padding是加在topNavBar-inner里面的，所以说宽度最多还是100%，不会超过父元素topNavBar的宽度。</p>
+</li>
+</ol>
+
+      
+    </div>
+</article>
+
+    </li>
+  
+    <li>
+      <article class='ListView'>
+    <header class="title">
+      
       <div class='ListMeta'>
   <time datetime="2018-06-01T08:52:51.576Z" itemprop="datePublished">
     2018-06-01
