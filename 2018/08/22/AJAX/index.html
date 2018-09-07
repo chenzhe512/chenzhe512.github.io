@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>AJAX | Smallvica</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="AJAX—异步的JavaScript与XML技术  1.简介维基百科AJAX即“Asynchronous JavaScript and XML”（异步的JavaScript与XML技术），指的是一套综合了多项技术的浏览器端网页开发技术。Ajax的概念由杰西·詹姆士·贾瑞特所提出。传统的Web应用允许用户端填写表单（form），当提交表单时就向网页服务器发送一个请求。服务器接收并处理传来的表单，然">
+  <meta name="description" content="AJAX—异步的JavaScript与XML技术">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AJAX">
 <meta property="og:url" content="http://yoursite.com/2018/08/22/AJAX/index.html">
 <meta property="og:site_name" content="Smallvica">
-<meta property="og:description" content="AJAX—异步的JavaScript与XML技术  1.简介维基百科AJAX即“Asynchronous JavaScript and XML”（异步的JavaScript与XML技术），指的是一套综合了多项技术的浏览器端网页开发技术。Ajax的概念由杰西·詹姆士·贾瑞特所提出。传统的Web应用允许用户端填写表单（form），当提交表单时就向网页服务器发送一个请求。服务器接收并处理传来的表单，然">
+<meta property="og:description" content="AJAX—异步的JavaScript与XML技术">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://i.loli.net/2018/08/22/5b7d3911bdf47.jpg">
-<meta property="og:updated_time" content="2018-09-03T07:46:43.783Z">
+<meta property="og:updated_time" content="2018-09-07T09:07:57.288Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AJAX">
-<meta name="twitter:description" content="AJAX—异步的JavaScript与XML技术  1.简介维基百科AJAX即“Asynchronous JavaScript and XML”（异步的JavaScript与XML技术），指的是一套综合了多项技术的浏览器端网页开发技术。Ajax的概念由杰西·詹姆士·贾瑞特所提出。传统的Web应用允许用户端填写表单（form），当提交表单时就向网页服务器发送一个请求。服务器接收并处理传来的表单，然">
+<meta name="twitter:description" content="AJAX—异步的JavaScript与XML技术">
 <meta name="twitter:image" content="https://i.loli.net/2018/08/22/5b7d3911bdf47.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Smallvica" type="application/atom+xml">
@@ -179,6 +179,7 @@
         <blockquote>
 <p>AJAX—异步的JavaScript与XML技术<br><img src="https://i.loli.net/2018/08/22/5b7d3911bdf47.jpg" alt="4-min.jpg"></p>
 </blockquote>
+<a id="more"></a>
 <h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h1><p>维基百科<br>AJAX即“Asynchronous JavaScript and XML”（异步的JavaScript与XML技术），指的是一套综合了多项技术的浏览器端网页开发技术。Ajax的概念由杰西·詹姆士·贾瑞特所提出。<br>传统的Web应用允许用户端填写表单（form），当提交表单时就向网页服务器发送一个请求。服务器接收并处理传来的表单，然后送回一个新的网页，但这个做法浪费了许多带宽，因为在前后两个页面中的大部分HTML码往往是相同的。由于每次应用的沟通都需要向服务器发送请求，应用的回应时间依赖于服务器的回应时间。这导致了用户界面的回应比本机应用慢得多。<br>与此不同，AJAX应用可以仅向服务器发送并取回必须的数据，并在客户端采用JavaScript处理来自服务器的回应。因为在服务器和浏览器之间交换的数据大量减少，服务器回应更快了。同时，很多的处理工作可以在发出请求的客户端机器上完成，因此Web服务器的负荷也减少了。<br>类似于DHTML或LAMP，AJAX不是指一种单一的技术，而是有机地利用了一系列相关的技术。虽然其名称包含XML，但实际上数据格式可以由JSON代替，进一步减少数据量，形成所谓的AJAJ。而客户端与服务器也并不需要异步。一些基于AJAX的“派生／合成”式（derivative/composite）的技术也正在出现，如AFLAX。</p>
 <h1 id="2-演变"><a href="#2-演变" class="headerlink" title="2.演变"></a>2.演变</h1><h1 id="2-1-如何发送请求？"><a href="#2-1-如何发送请求？" class="headerlink" title="2.1 如何发送请求？"></a>2.1 如何发送请求？</h1><p>最初的具有局限性的发送请求的几种方式：</p>
 <ul>
@@ -190,7 +191,7 @@
 </ul>
 <ol>
 <li>get、post、put、delete 请求都行</li>
-<li>形式不定，即想以什么形式展示就以什么形式展示<h1 id="2-2-新突破"><a href="#2-2-新突破" class="headerlink" title="2.2 新突破"></a>2.2 新突破</h1>IE 5 率先在 JS 中引入 ActiveX 对象（API），使得 JS 可以直接发起 HTTP 请求。<br>随后 Mozilla、 Safari、 Opera 也跟进（抄袭）了，取名 XMLHttpRequest，并被纳入 W3C 规范。<h1 id="2-3规范化"><a href="#2-3规范化" class="headerlink" title="2.3规范化"></a>2.3规范化</h1>Jesse James Garrett将这个技术取名为AJAX：异步的JavaScript和XML。</li>
+<li>形式不定，即想以什么形式展示就以什么形式展示<h1 id="2-2新突破"><a href="#2-2新突破" class="headerlink" title="2.2新突破"></a>2.2新突破</h1>IE 5 率先在 JS 中引入 ActiveX 对象（API），使得 JS 可以直接发起 HTTP 请求。<br>随后 Mozilla、 Safari、 Opera 也跟进（抄袭）了，取名 XMLHttpRequest，并被纳入 W3C 规范。<h1 id="2-3规范化"><a href="#2-3规范化" class="headerlink" title="2.3规范化"></a>2.3规范化</h1>Jesse James Garrett将这个技术取名为AJAX：异步的JavaScript和XML。</li>
 <li>创建 AJAX 对象, 即 XMLHttpRequest</li>
 <li>使用XMLHttpRequest发请求</li>
 <li>服务器返回XML格式的字符串，只能返回字符串</li>
