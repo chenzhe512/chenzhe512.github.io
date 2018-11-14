@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Smallvica</title>
+  <title>Smallvica</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Smallvica">
-<meta property="og:url" content="http://yoursite.com/archives/page/3/index.html">
+<meta property="og:url" content="http://yoursite.com/page/4/index.html">
 <meta property="og:site_name" content="Smallvica">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
@@ -152,286 +152,361 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-HTTP" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/28/HTTP/">HTTP</a>
+    </h1>
+  
+
+        
+        <a href="/2018/05/28/HTTP/" class="archive-article-date">
+  	<time datetime="2018-05-28T06:41:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-28</time>
+</a>
+        
+      </header>
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><h2 id="URI"><a href="#URI" class="headerlink" title="URI"></a>URI</h2><p>URI(Uniform Resource Identifier),即统一资源标识符，是一个用于标识某一互联网资源名称的字符串。该种标识允许用户对网络中(www)的资源通过特定的协议进行交互操作。<br>URI最常见的形式为URL(统一资源定位符,Uniform Resource Locator)，和罕见的用法URN(统一资源名称,Uniform Resource Name):<br><img src="https://raw.githubusercontent.com/chenzhe512/blog-generator/master/image/url.png" alt="URL"><br>URL包括协议、域名、端口号、路径、查询参数、锚点。图中没有端口<br>URL如图通过URL你可以确定一个唯一的网址。<a href="https://www.baidu.com/s?wd=hello&amp;rsv_spt=1#5，其中.com是顶级域名，baidu是二级域名，www是三级域名。" target="_blank" rel="noopener">https://www.baidu.com/s?wd=hello&amp;rsv_spt=1#5，其中.com是顶级域名，baidu是二级域名，www是三级域名。</a><br>URN,ISBN: 9787115275790 就是一个 URN，通过 URN 你可以确定一个「唯一的」资源，ISBN: 9787115275790 对应的资源的是《JavaScript 高级程序设计（第三版）》这本书。你去是介绍任何一个图书馆、书店，他们都知道是这本书。<br>URI可被视为定位符（URL），名称（URN）或两者兼备。统一资源名（URN）如同一个人的名称，而统一资源定位符（URL）代表一个人的住址。换言之，URN定义某事物的身份，而URL提供查找该事物的方法。</p>
+<h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><p>HTTP(超文本传输协议，HyperText Transfer Protocol)，一种用于分布式、协作式和超媒体信息系统的应用层协议。HTTP是万维网的数据通信的基础。<br>设计HTTP最初的目的是为了提供一种发布和接收HTML页面的方法。通过HTTP或者HTTPS协议请求的资源由统一资源标识符（Uniform Resource Identifiers，URI）来标识。</p>
+<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><p>HTML(超文本标记语言,HyperText Markup Language）是一种用于创建网页的标准标记语言。HTML是一种基础技术，常与CSS、JavaScript一起被众多网站用于设计令人赏心悦目的网页、网页应用程序以及移动应用程序的用户界面[1]。网页浏览器可以读取HTML文件，并将其渲染成可视化网页。HTML描述了一个网站的结构语义随着线索的呈现，使之成为一种标记语言而非编程语言。</p>
+<h2 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h2><p>DNS(域名系统,Domain Name System）是互联网的一项服务。它作为将域名和IP地址相互映射的一个分布式数据库，能够使人更方便地访问互联网。DNS使用TCP和UDP端口53。当前，对于每一级域名长度的限制是63个字符，域名总长度则不能超过253个字符。<br>DNS的作用是输入域名，输出对应的IP。</p>
+<h1 id="请求与响应"><a href="#请求与响应" class="headerlink" title="请求与响应"></a>请求与响应</h1><h2 id="请求"><a href="#请求" class="headerlink" title="请求"></a>请求</h2><h3 id="请求的格式"><a href="#请求的格式" class="headerlink" title="请求的格式"></a>请求的格式</h3><p>1 动词 路径 协议/版本<br>2   Key1: value1<br>    Key2: value2<br>    Key3: value3<br>    Content-Type: application/x-www-form-urlencoded<br>    Host: <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>    User-Agent: curl/7.54.0<br>3<br>4 要上传的数据</p>
+<h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><p>1.请求最多四部分，最少三部分，第四部分可以为空<br>2.第三部分永远为一个回车<br>3.动词包括GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS等；GET为获取信息，POST为上传信息，PUT为整体更新，PATCH为局部更新，DELETE为删除<br>4.路径包括查询参数但不包括锚点<br>5.如果没写路径，默认为/<br>6.第二部分中的Content-Type标注了第四部分的格式<br>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt; POST / HTTP/1.1</span><br><span class="line">&gt; Host: www.baidu.com</span><br><span class="line">&gt; User-Agent: curl/7.55.0</span><br><span class="line">&gt; Accept: */*</span><br><span class="line">&gt; Frank: xxx</span><br><span class="line">&gt; Content-Length: 10</span><br><span class="line">&gt; Content-Type: application/x-www-form-urlencoded</span><br><span class="line">&gt;</span><br><span class="line">&#125; [10 bytes data]</span><br></pre></td></tr></table></figure></p>
+<h2 id="响应"><a href="#响应" class="headerlink" title="响应"></a>响应</h2><h3 id="响应的格式"><a href="#响应的格式" class="headerlink" title="响应的格式"></a>响应的格式</h3><p>1 协议/版本号 状态码 状态解释<br>2   Key1: value1<br>    Key2: value2<br>    Content-Length: 17931<br>    Content-Type: text/html<br>3<br>4 要下载的内容</p>
+<h3 id="补充-1"><a href="#补充-1" class="headerlink" title="补充"></a>补充</h3><h4 id="1xx消息"><a href="#1xx消息" class="headerlink" title="1xx消息"></a>1xx消息</h4><p>这一类型的状态码，代表请求已被接受，需要继续处理。这类响应是临时响应，只包含状态行和某些可选的响应头信息，并以空行结束。由于HTTP/1.0协议中没有定义任何1xx状态码，所以除非在某些试验条件下，服务器禁止向此类客户端发送1xx响应。[4] 这些状态码代表的响应都是信息性的，标示客户应该采取的其他行动。</p>
+<h4 id="2xx成功"><a href="#2xx成功" class="headerlink" title="2xx成功"></a>2xx成功</h4><p>这一类型的状态码，代表请求已成功被服务器接收、理解、并接受。<br>其中200已接受请求，但尚未处理（GET），204服务器成功处理了请求，没有返回任何内容（POST)</p>
+<h4 id="3xx重定向"><a href="#3xx重定向" class="headerlink" title="3xx重定向"></a>3xx重定向</h4><p>这类状态码代表需要客户端采取进一步的操作才能完成请求。通常，这些状态码用来重定向，后续的请求地址（重定向目标）在本次响应的Location域中指明。<br>当且仅当后续的请求所使用的方法是GET或者HEAD时，用户浏览器才可以在没有用户介入的情况下自动提交所需要的后续请求。客户端应当自动监测无限循环重定向（例如：A→B→C→……→A或A→A），因为这会导致服务器和客户端大量不必要的资源消耗。按照HTTP/1.0版规范的建议，浏览器不应自动访问超过5次的重定向。<br>301被请求的资源已<strong>永久移动到新位置</strong>，并且将来任何对此资源的引用都应该使用本响应返回的若干个URI之一。如果可能，拥有链接编辑功能的客户端应当自动把请求的地址修改为从服务器反馈回来的地址。除非额外指定，否则这个响应也是可缓存的。<br>302要求客户端执行<strong>临时重定向</strong>。由于这样的重定向是临时的，客户端应当继续向原有地址发送以后的请求。只有在Cache-Control或Expires中进行了指定的情况下，这个响应才是可缓存的。<br>304表示<strong>资源未被修改</strong>，因为请求头指定的版本If-Modified-Since或If-None-Match。在这种情况下，由于客户端仍然具有以前下载的副本，因此不需要重新传输资源。</p>
+<h4 id="4xx客户端错误"><a href="#4xx客户端错误" class="headerlink" title="4xx客户端错误"></a>4xx客户端错误</h4><p>这类的状态码代表了客户端看起来可能发生了错误，妨碍了服务器的处理。除非响应的是一个HEAD请求，否则服务器就应该返回一个解释当前错误状况的实体，以及这是临时的还是永久性的状况。这些状态码适用于任何请求方法。浏览器应当向用户显示任何包含在此类错误响应中的实体内容。</p>
+<h4 id="5xx服务器错误"><a href="#5xx服务器错误" class="headerlink" title="5xx服务器错误"></a>5xx服务器错误</h4><p>表示<strong>服务器无法完成明显有效的请求</strong>。这类状态码代表了服务器在处理请求的过程中有错误或者异常状态发生，也有可能是服务器意识到以当前的软硬件资源无法完成对请求的处理。除非这是一个HEAD请求，否则服务器应当包含一个解释当前错误状态以及这个状况是临时的还是永久的解释信息实体。浏览器应当向用户展示任何在当前响应中被包含的实体。这些状态码适用于任何响应方法。<br>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt; HTTP/1.1 302 Found</span><br><span class="line">&lt; Connection: Keep-Alive</span><br><span class="line">&lt; Content-Length: 17931</span><br><span class="line">&lt; Content-Type: text/html</span><br><span class="line">&lt; Date: Mon, 28 May 2018 07:54:08 GMT</span><br><span class="line">&lt; Etag: &quot;54d97485-460b&quot;</span><br><span class="line">&lt; Server: bfe/1.0.8.18</span><br><span class="line">&lt;</span><br><span class="line">&#123; [1440 bytes data]</span><br></pre></td></tr></table></figure></p>
+<h1 id="用Chrome查看HTTP请求与响应内容"><a href="#用Chrome查看HTTP请求与响应内容" class="headerlink" title="用Chrome查看HTTP请求与响应内容"></a>用Chrome查看HTTP请求与响应内容</h1><p>首先，右键单击Chrome页面空白处弹出对话框的检查按钮<br><img src="https://raw.githubusercontent.com/chenzhe512/blog-generator/master/image/%E6%A3%80%E6%9F%A5.jpg" alt="检查"><br>选择页面的Network选项<br><img src="https://raw.githubusercontent.com/chenzhe512/blog-generator/master/image/Network.jpg" alt="Network"><br>在页面上刷新一下就会向服务器发送一个请求同时会接受一个响应，单击类型为document的文件<br><img src="https://raw.githubusercontent.com/chenzhe512/blog-generator/master/image/Doc.jpg" alt="Doc"><br>右侧会出现如下图的三个选项，Response为响应，Request为请求,由此就得到了刷新一个页面这个操作的HTTP请求和响应内容<br><img src="https://raw.githubusercontent.com/chenzhe512/blog-generator/master/image/%E5%86%85%E5%AE%B9.jpg" alt="内容"></p>
+<h2 id="请求内容"><a href="#请求内容" class="headerlink" title="请求内容"></a>请求内容</h2><p>点开Request Headers选项后，一定要点下<strong>view source</strong>，得到如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">GET /courses/ec3a5e28-02da-47d6-9226-927db23e82a2 HTTP/1.1</span><br><span class="line">Host: xiedaimala.com</span><br><span class="line">Connection: keep-alive</span><br><span class="line">Cache-Control: max-age=0</span><br><span class="line">Upgrade-Insecure-Requests: 1</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36</span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8</span><br><span class="line">Accept-Encoding: gzip, deflate, br</span><br><span class="line">Accept-Language: zh-CN,zh;q=0.9</span><br><span class="line">Cookie: UM_distinctid=1638743d0ca79-082af185a2f84e-3c3c520d-100200-1638743d0cb18a; CNZZDATA1271340636=996656435-1526978113-https%253A%252F%252Fxiedaimala.com%252F%7C1527498</span><br></pre></td></tr></table></figure></p>
+<h2 id="响应内容"><a href="#响应内容" class="headerlink" title="响应内容"></a>响应内容</h2><p>点开Response Headers选项，也一定要点下<strong>view source</strong>，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.1 200 OK</span><br><span class="line">Server: nginx/1.4.6 (Ubuntu)</span><br><span class="line">Date: Mon, 28 May 2018 09:56:56 GMT</span><br><span class="line">Content-Type: text/html; charset=utf-8</span><br><span class="line">Transfer-Encoding: chunked</span><br><span class="line">Connection: keep-alive</span><br><span class="line">X-Frame-Options: SAMEORIGIN</span><br><span class="line">X-XSS-Protection: 1; mode=block</span><br><span class="line">X-Content-Type-Options: nosniff</span><br><span class="line">Cache-Control: max-age=0, private, must-revalidate</span><br><span class="line">Set-Cookie: _task_center_session=YjFtRUYvQzVOcHl1SDlueXhlQ1hRbDNKUUh1alg0VE9ZbHlNdzVyOUpRSHhROTkyTmhITGE0MFp2Y1JoMmlsM1Q2WmJ1R1JyS3p2bHhuaVpKWXVuVUZham43c3FOWVNVY2xON01XTkVNdzV1eHBCdTcwbExhMjU2anh1K0lNcFVOeU9tY2hjanRTVXZpYStMcnhMTmd3PT0tLWN4MzhobStsckhheGZRRmpCQTJTS1E9PQ%3D%3D--8274179183ee126234b96358f290b380794966c1; path=/; secure; HttpOnly</span><br><span class="line">X-Request-Id: 0d95e9e6-4a2d-4e4a-bad6-d0424b30b30c</span><br><span class="line">X-Runtime: 0.021043</span><br><span class="line">Strict-Transport-Security: max-age=15552000; includeSubDomains</span><br><span class="line">Strict-Transport-Security: max-age=15768000</span><br><span class="line">Content-Encoding: gzip</span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/05/28/HTTP/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="archives">
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-如何写一篇博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/27/CSS学习之Selectors、animation等/" class="archive-article-date">
-  	<time datetime="2018-07-27T07:13:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-27</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/27/CSS学习之Selectors、animation等/">CSS学习之Selectors、animation等</a>
+      <a class="article-title" href="/2018/05/28/如何写一篇博客/">如何写一篇博客</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2018/05/28/如何写一篇博客/" class="archive-article-date">
+  	<time datetime="2018-05-28T04:28:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="使用Hexo-GitHub-搭建一个博客"><a href="#使用Hexo-GitHub-搭建一个博客" class="headerlink" title="使用Hexo + GitHub 搭建一个博客"></a>使用Hexo + GitHub 搭建一个博客</h2><p>0.选择一个自己存放博客文件的目录来作为仓库/d/MyBlog/myBlog<br>1.在Github上创建一个新仓库repo来作为博客，命名为[你的用户名.github.io],你的用户名为github的用户名<br>2.npm install -g hexo-cli，安装 Hexo<br>3.hexo init myBlog<br>4.cd myBlog<br>5.npm i<br>6.hexo new 如何写一篇博客，创建第一个博客，一个.md文件，类似于：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new 如何写一篇博客</span><br><span class="line">INFO  Created: D:\MyBlog\myBlog\source\_posts\如何写一篇博客.md</span><br></pre></td></tr></table></figure></p>
+<p>7.start ./source/_posts/如何写一篇博客.md,编辑自己的第一篇博客<br>8.start _config.yml，编辑网站配置<br>    Ⅰ.把第 6 行的 title 改成自己博客的主名<br>    Ⅱ.把第 9 行的 author 改成自己的名字<br>    Ⅲ.把最后一行的 type 改成 type: git<br>    Ⅳ.在最后一行后面新增一行，左边与 type 平齐，加上一行 repo: 仓库地址 （请将仓库地址改为「你的用户名.github.io」对应的仓库地址，仓库地址以 <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>: 开头你知道吧？不知道？不知道的话现在你知道了）repo:后面有个空格<br>9.npm install hexo-deployer-git –save，安装 git 部署插件<br>10.hexo deploy<br>11.进入「你的用户名.github.io」对应的 repo，打开 GitHub Pages 功能<br>12.进入「你的用户名.github.io」，就可以查看博客</p>
+<h2 id="开始写博客"><a href="#开始写博客" class="headerlink" title="开始写博客"></a>开始写博客</h2><p>在完成搭建博客之后，接下来如果想写博客的话只需要四步就可完成<br>1.hexo new 博客标题<br>2.start 路径<br>3.hexo generate<br>4.hexo deploy</p>
+<h1 id="问题补充"><a href="#问题补充" class="headerlink" title="问题补充"></a>问题补充</h1><h2 id="路径问题"><a href="#路径问题" class="headerlink" title="路径问题"></a>路径问题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Chenzhe@Chenzhe MINGW64 ~/desktop (master)</span><br><span class="line">$ cd ~/d/MyBlog/myBlog</span><br><span class="line">bash: cd: /c/Users/Administrator/d/MyBlog/myBlog: No such file or directory</span><br><span class="line">Chenzhe@Chenzhe MINGW64 ~/desktop (master)</span><br><span class="line">$ cd /d/MyBlog/myBlog</span><br></pre></td></tr></table></figure>
+<p>第一个出错的原因，~代表的是用户目录即/c/Users/Administrator（Windows环境下）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Chenzhe@Chenzhe MINGW64 ~/desktop (master)</span><br><span class="line">$ cd d/MyBlog/myBlog</span><br><span class="line">bash: cd: d/MyBlog/myBlog: No such file or directory</span><br><span class="line">Chenzhe@Chenzhe MINGW64 ~/desktop (master)</span><br><span class="line">$ cd /d/MyBlog/myBlog</span><br></pre></td></tr></table></figure></p>
+<p>第二个出错的原因，/代表的是所有目录，.代表的是当前目录，..代表附目录<br>所以说如果想进入D盘的话，必须是cd /d/…,而不能是cd d/…<br>出现这两个问题的原因是【忘了】，所以应该经常写博客记录自己的学习内容，加深记忆</p>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/05/28/如何写一篇博客/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/27/原型及原型链/" class="archive-article-date">
-  	<time datetime="2018-07-27T02:41:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-27</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-git简述" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/27/原型及原型链/">原型及原型链</a>
+      <a class="article-title" href="/2018/05/24/git简述/">git简述</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2018/05/24/git简述/" class="archive-article-date">
+  	<time datetime="2018-05-24T10:32:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a><font color="black" size="8">Git</font></h1><p><img src="https://raw.githubusercontent.com/chenzhe512/blog-generator/master/image/git.png" alt=""><br>刚接触git一周左右的时间，看到这幅阮一峰老师的图片，感觉可以很清晰的解释git一些基本操作指令之间的关系，也说一下自己的了解：首先在本地先初始化或者新建一个仓库（用git init命令），git add是将自己在工作区的变动提交到暂存区，git commit是将暂存区的内容提交到本地仓库。至此，自己所进行的操作已经储存在了本地仓库。</p>
+<h1 id="git-init"><a href="#git-init" class="headerlink" title="git init"></a>git init</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br><span class="line">Initialized empty Git repository in C:/Users/Administrator/Desktop/music/.git/</span><br></pre></td></tr></table></figure>
+<p>初始化的空git仓库已经建立在C:/Users/Administrator/Desktop/music/.git/</p>
+<h1 id="git-add"><a href="#git-add" class="headerlink" title="git add"></a>git add</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Chenzhe@Chenzhe MINGW64 ~/desktop/music (master)</span><br><span class="line">$ touch 666.txt</span><br><span class="line">Chenzhe@Chenzhe MINGW64 ~/desktop/music (master)</span><br><span class="line">$ git add 666.txt</span><br></pre></td></tr></table></figure>
+<p>创建一个666.txt的txt文件，并将其提交到暂存区</p>
+<h1 id="git-commit"><a href="#git-commit" class="headerlink" title="git commit"></a>git commit</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git commit 666.txt -m &quot;将666.txt从暂存区提交到本地仓库&quot;</span><br><span class="line">[master (root-commit) 24b7b50] 将666.txt从暂存区提交到本地仓库</span><br><span class="line"> 1 file changed, 0 insertions(+), 0 deletions(-)</span><br><span class="line"> create mode 100644 666.txt</span><br></pre></td></tr></table></figure>
+<p>把暂存区的666.txt提交到本地仓库</p>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/05/24/git简述/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/26/Tween-缓动/" class="archive-article-date">
-  	<time datetime="2018-07-26T13:18:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-如何使用ls、cat、mv、touch命令以及explainshell-com网站" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/26/Tween-缓动/">Tween-缓动</a>
+      <a class="article-title" href="/2018/05/24/如何使用ls、cat、mv、touch命令以及explainshell-com网站/">如何使用ls、cat、mv、touch命令以及explainshell.com网站</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2018/05/24/如何使用ls、cat、mv、touch命令以及explainshell-com网站/" class="archive-article-date">
+  	<time datetime="2018-05-24T02:54:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本文主要通过结合explainshell.com来对ls、cat、mv、touch命令进行解释。</p>
+<h1 id="ls的使用"><a href="#ls的使用" class="headerlink" title="ls的使用"></a><font color="gray" size="8">ls的使用</font></h1><p><img src="https://raw.githubusercontent.com/chenzhe512/blog-generator/master/image/ls.jpg" alt="ls"><br>根据explainshell.com解释，ls命令的含义是列出当前目录内的内容，包括子目录和文件，输入ls就会列出myBlog下的所有目录内容，但不包括隐藏的目录和文件。如下图所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Chenzhe@Chenzhe MINGW64 /d/MyBlog/myBlog (master)</span><br><span class="line">$ ls</span><br><span class="line">_config.yml  image/         package.json       public/    scaffolds/  themes/</span><br><span class="line">db.json      node_modules/  package-lock.json  README.md  source/</span><br></pre></td></tr></table></figure></p>
+<h1 id="cat的使用"><a href="#cat的使用" class="headerlink" title="cat的使用"></a><font color="gray" size="8">cat的使用</font></h1><p><img src="https://raw.githubusercontent.com/chenzhe512/blog-generator/master/image/cat.jpg" alt="cat"><br>根据explainshell.com解释，cat命令的含义是连接文件并打印文件的内容。</p>
+<h1 id="mv的使用"><a href="#mv的使用" class="headerlink" title="mv的使用"></a><font color="gray" size="8">mv的使用</font></h1><p><img src="https://raw.githubusercontent.com/chenzhe512/blog-generator/master/image/mv.jpg" alt="mv"><br>根据explainshell.com解释，mv命令的含义是移动或者重命名文件。</p>
+<h1 id="touch的使用"><a href="#touch的使用" class="headerlink" title="touch的使用"></a><font color="gray" size="8">touch的使用</font></h1><p><img src="https://raw.githubusercontent.com/chenzhe512/blog-generator/master/image/touch.jpg" alt="touch"><br>根据explainshell.com解释，touch命令的含义是更改文件的时间戳。</p>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/05/24/如何使用ls、cat、mv、touch命令以及explainshell-com网站/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/23/JS数据类型转换/" class="archive-article-date">
-  	<time datetime="2018-07-23T06:25:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/23/JS数据类型转换/">JS数据类型转换</a>
+      <a class="article-title" href="/2018/05/23/hello-world/">Hello World</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/23/JS数据/" class="archive-article-date">
-  	<time datetime="2018-07-23T03:01:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
+        
+        <a href="/2018/05/23/hello-world/" class="archive-article-date">
+  	<time datetime="2018-05-23T12:15:27.747Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-23</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/23/JS数据/">JS数据</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/05/23/hello-world/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/13/JS怎么学？/" class="archive-article-date">
-  	<time datetime="2018-07-13T09:32:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/13/JS怎么学？/">JS怎么学？</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
-
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/28/CSS居中/" class="archive-article-date">
-  	<time datetime="2018-06-28T08:24:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/28/CSS居中/">CSS居中</a>
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/01/HTML标签/" class="archive-article-date">
-  	<time datetime="2018-06-01T08:52:51.576Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/30/Vim和MD/" class="archive-article-date">
-  	<time datetime="2018-05-30T03:07:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/30/Vim和MD/">Vim和MD</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/29/简易服务器/" class="archive-article-date">
-  	<time datetime="2018-05-29T05:11:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/29/简易服务器/">简易服务器</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
-  
-
-    
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/page/2/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/4/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
     </nav>
   
 
@@ -455,9 +530,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: false,
+		isHome: true,
 		isPost: false,
-		isArchive: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

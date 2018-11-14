@@ -8,14 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>This | Smallvica</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="this是JavaScript中的一个关键词。  this概念this是函数运行时，在函数内部自动生成的一个对象，只能在函数内部使用。函数的不同场合，this的值也不同。但总的来说this就是函数运行时所在的环境对象。JS函数可以在不同的环境中运行，所以需要有一种机制，能够在函数体内部获得当前的运行环境。所以，this就出现了，它的设计目的就是在函数体内部，指代函数当前的运行环境。 使用场合全局">
+<meta property="og:type" content="article">
 <meta property="og:title" content="This">
 <meta property="og:url" content="http://yoursite.com/2018/09/07/This/index.html">
 <meta property="og:site_name" content="Smallvica">
+<meta property="og:description" content="this是JavaScript中的一个关键词。  this概念this是函数运行时，在函数内部自动生成的一个对象，只能在函数内部使用。函数的不同场合，this的值也不同。但总的来说this就是函数运行时所在的环境对象。JS函数可以在不同的环境中运行，所以需要有一种机制，能够在函数体内部获得当前的运行环境。所以，this就出现了，它的设计目的就是在函数体内部，指代函数当前的运行环境。 使用场合全局">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-06T17:56:19.730Z">
+<meta property="og:updated_time" content="2018-11-08T05:55:05.851Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="This">
+<meta name="twitter:description" content="this是JavaScript中的一个关键词。  this概念this是函数运行时，在函数内部自动生成的一个对象，只能在函数内部使用。函数的不同场合，this的值也不同。但总的来说this就是函数运行时所在的环境对象。JS函数可以在不同的环境中运行，所以需要有一种机制，能够在函数体内部获得当前的运行环境。所以，this就出现了，它的设计目的就是在函数体内部，指代函数当前的运行环境。 使用场合全局">
   
     <link rel="alternative" href="/atom.xml" title="Smallvica" type="application/atom+xml">
   
@@ -171,7 +174,41 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <blockquote>
+<p>this是JavaScript中的一个关键词。</p>
+</blockquote>
+<h1 id="this概念"><a href="#this概念" class="headerlink" title="this概念"></a>this概念</h1><p>this是函数运行时，在函数内部自动生成的一个对象，只能在函数内部使用。<br>函数的不同场合，this的值也不同。但总的来说this就是函数运行时所在的环境对象。<br>JS函数可以在不同的环境中运行，所以需要有一种机制，能够在函数体内部获得当前的运行环境。所以，this就出现了，它的设计目的就是在函数体内部，指代函数当前的运行环境。</p>
+<h1 id="使用场合"><a href="#使用场合" class="headerlink" title="使用场合"></a>使用场合</h1><h2 id="全局环境"><a href="#全局环境" class="headerlink" title="全局环境"></a>全局环境</h2><p>在全局环境中使用this，指向顶层对象window。(任何函数体外部)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">this === window // true</span><br><span class="line"></span><br><span class="line">a = 37;</span><br><span class="line">console.log(window.a); // 37</span><br></pre></td></tr></table></figure></p>
+<h2 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h2><p>构造函数是通过这个函数可以生成一个新对象。此时，this指向正在构造的新对象（实例对象）。<br>简单介绍一下构造函数：<br>典型的面向对象编程语言（比如 C++ 和 Java），都有“类”（class）这个概念。所谓“类”就是对象的模板，对象就是“类”的实例。但是，JavaScript 语言的对象体系，不是基于“类”的，而是基于构造函数（constructor）和原型链（prototype）。<br>构造函数的特点有两个：</p>
+<ul>
+<li>函数内部使用了this关键字，代表所有生成的实例对象。</li>
+<li>生成对象的时候，必须使用new命令。<br>构造函数的命令原理：</li>
+</ul>
+<ol>
+<li>创建一个空对象，作为将要返回的对象实例。</li>
+<li>将这个空对象的原型，指向构造函数的prototype属性。</li>
+<li>将这个空对象赋值给函数内部的this关键字。</li>
+<li>开始执行构造函数内部的代码。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function People()&#123;</span><br><span class="line">    this.name = &apos;小明&apos;</span><br><span class="line">&#125;</span><br><span class="line">var a = new People()</span><br><span class="line">console.log(a.name) //小明</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="对象的方法"><a href="#对象的方法" class="headerlink" title="对象的方法"></a>对象的方法</h2><p>对象的方法里面包含this，this的指向就是方法运行时所在的对象。该方法赋值给另一个对象，就会改变this的指向。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var a = &#123;</span><br><span class="line">    age: 22,</span><br><span class="line">    getage: function()&#123;</span><br><span class="line">        return this.age</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">console.log(a.getage()) // 22</span><br></pre></td></tr></table></figure></p>
+<p>a.getage方法执行时，内部的this指向a。</p>
+<hr>
+<p>如果this所在的方法不在对象的第一层，这是this只是指向当前一层的对象，而不是继承更上面的层的对象。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var a = &#123;</span><br><span class="line">  p: &apos;Hello&apos;,</span><br><span class="line">  b: &#123;</span><br><span class="line">    m: function() &#123;</span><br><span class="line">      console.log(this.p);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">a.b.m() // undefined</span><br></pre></td></tr></table></figure></p>
+<p>a.b.m方法在a对象的第二层，该方法内部的this不是指向a，而是指向a.b。<br>如果这时将嵌套对象内部的方法赋值给一个变量，this依然会指向全局对象。</p>
+<h2 id="DOM事件处理函数"><a href="#DOM事件处理函数" class="headerlink" title="DOM事件处理函数"></a>DOM事件处理函数</h2><p>当函数被用作事件处理函数时，它的this指向触发事件的元素。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function bluify(e)&#123;</span><br><span class="line">  console.log(this === e.currentTarget); // 总是 true</span><br><span class="line"></span><br><span class="line">  console.log(this === e.target);  // 当 currentTarget 和 target 是同一个对象时为 true      </span><br><span class="line">  this.style.backgroundColor = &apos;#A5D9F3&apos;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var elements = document.getElementsByTagName(&apos;*&apos;);</span><br><span class="line"></span><br><span class="line">for(var i=0 ; i&lt;elements.length ; i++)&#123;</span><br><span class="line">  elements[i].addEventListener(&apos;click&apos;, bluify, false);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="内联事件处理函数"><a href="#内联事件处理函数" class="headerlink" title="内联事件处理函数"></a>内联事件处理函数</h2><p>当代码被内联on-event 处理函数调用时，它的this指向监听器所在的DOM元素：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;button onclick=&quot;alert(this.tagName.toLowerCase());&quot;&gt;</span><br><span class="line">  Show this</span><br><span class="line">&lt;/button&gt;</span><br></pre></td></tr></table></figure></p>
+<h1 id="绑定this的方法"><a href="#绑定this的方法" class="headerlink" title="绑定this的方法"></a>绑定this的方法</h1><p>this的动态切换，固然为 JavaScript 创造了巨大的灵活性，但也使得编程变得困难和模糊。<br>有时，需要把this固定下来，避免出现意想不到的情况。<br>JavaScript 提供了call、apply、bind这三个方法，来切换/固定this的指向。</p>
+<h2 id="call"><a href="#call" class="headerlink" title=".call()"></a>.call()</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;&#125;</span><br><span class="line"></span><br><span class="line">var f = function () &#123;</span><br><span class="line">  return this</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">f() === window // true</span><br><span class="line">f.call(obj) === obj // true</span><br></pre></td></tr></table></figure>
+<p>全局环境运行函数f时，this指向全局环境（浏览器为window对象）；<br>call方法可以改变this的指向，指定this指向对象obj，然后在对象obj的作用域中运行函数f。</p>
+<hr>
+<p>call方法的参数，应该是一个对象。如果参数为空、null和undefined，则默认传入全局对象。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var n = 123;</span><br><span class="line">var obj = &#123; n: 456 &#125;;</span><br><span class="line"></span><br><span class="line">function a() &#123;</span><br><span class="line">  console.log(this.n);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a.call() // 123</span><br><span class="line">a.call(null) // 123</span><br><span class="line">a.call(undefined) // 123</span><br><span class="line">a.call(window) // 123</span><br><span class="line">a.call(obj) // 456</span><br></pre></td></tr></table></figure></p>
+<p>call方法还可以接受多个参数.<br>call的第一个参数就是this所要指向的那个对象，后面的参数则是函数调用时所需的参数。<br><code>func.call(thisValue, arg1, arg2, ...)</code></p>
+<h2 id="apply"><a href="#apply" class="headerlink" title=".apply()"></a>.apply()</h2><p>apply方法的作用与call方法类似，也是改变this指向，然后再调用该函数。<br>唯一的区别就是，它接收一个数组作为函数执行时的参数，使用格式如下。<br><code>func.apply(thisValue, [arg1, arg2, ...])</code><br>利用这一点可以做一些应用，例如找出数组最大元素、将数组的空元素变为undefined、转换类似数组的对象、绑定回调函数的对象。</p>
+<h2 id="bind"><a href="#bind" class="headerlink" title=".bind()"></a>.bind()</h2><p>bind方法用于将函数体内的this绑定到某个对象，然后返回一个新函数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var d = new Date();</span><br><span class="line">d.getTime() // 1481869925657</span><br><span class="line"></span><br><span class="line">var print = d.getTime;</span><br><span class="line">print() // Uncaught TypeError: this is not a Date object.</span><br></pre></td></tr></table></figure></p>
+<p>getTime内部的方法this绑定Date对象的实例，将d.getTime方法赋给d之后，内部this已经不指向Date实例。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var print = d.getTime.bind(d);</span><br><span class="line">print() // 1481869925657</span><br></pre></td></tr></table></figure></p>
+<p>bind可以将getTime方法内部的this绑定到d对象，这时就可以安全地将这个方法赋值给其他变量。</p>
+
       
 
       

@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Smallvica</title>
+  <title>CSS总结（堆叠上下文） | Smallvica</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Smallvica">
-<meta property="og:url" content="http://yoursite.com/archives/page/3/index.html">
+  <meta name="description" content="堆叠上下文。  问题12345678div&amp;#123;  width: 200px;  height: 200px;  border: 5px solid red;  padding: 12px;  margin: 15px;  background-color: black;&amp;#125; border与background相比，哪个更靠近你的眼睛。border确定方法：5ps solid rg">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS总结（堆叠上下文）">
+<meta property="og:url" content="http://yoursite.com/2018/11/09/CSS总结（堆叠上下文）/index.html">
 <meta property="og:site_name" content="Smallvica">
+<meta property="og:description" content="堆叠上下文。  问题12345678div&amp;#123;  width: 200px;  height: 200px;  border: 5px solid red;  padding: 12px;  margin: 15px;  background-color: black;&amp;#125; border与background相比，哪个更靠近你的眼睛。border确定方法：5ps solid rg">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-09T06:27:32.794Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Smallvica">
+<meta name="twitter:title" content="CSS总结（堆叠上下文）">
+<meta name="twitter:description" content="堆叠上下文。  问题12345678div&amp;#123;  width: 200px;  height: 200px;  border: 5px solid red;  padding: 12px;  margin: 15px;  background-color: black;&amp;#125; border与background相比，哪个更靠近你的眼睛。border确定方法：5ps solid rg">
   
     <link rel="alternative" href="/atom.xml" title="Smallvica" type="application/atom+xml">
   
@@ -150,289 +154,105 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-CSS总结（堆叠上下文）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS总结（堆叠上下文）
+    </h1>
+  
+
+        
+        <a href="/2018/11/09/CSS总结（堆叠上下文）/" class="archive-article-date">
+  	<time datetime="2018-11-08T17:35:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-09</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>堆叠上下文。</p>
+</blockquote>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">  width: 200px;</span><br><span class="line">  height: 200px;</span><br><span class="line">  border: 5px solid red;</span><br><span class="line">  padding: 12px;</span><br><span class="line">  margin: 15px;</span><br><span class="line">  background-color: black;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="border与background相比，哪个更靠近你的眼睛。"><a href="#border与background相比，哪个更靠近你的眼睛。" class="headerlink" title="border与background相比，哪个更靠近你的眼睛。"></a>border与background相比，哪个更靠近你的眼睛。</h3><p>border<br>确定方法：<figure class="highlight plain"><figcaption><span>5ps solid rgba(255,0,0,1);```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">### border与文字（内联元素）相比，哪个更靠近你的眼睛？</span><br><span class="line">确定方法：```text-indent: -20px;</span><br></pre></td></tr></table></figure></p>
+<h3 id="div-块级元素-与文字（内联元素）相比-哪个更靠近你的眼睛？"><a href="#div-块级元素-与文字（内联元素）相比-哪个更靠近你的眼睛？" class="headerlink" title="div(块级元素)与文字（内联元素）相比,哪个更靠近你的眼睛？"></a>div(块级元素)与文字（内联元素）相比,哪个更靠近你的眼睛？</h3><p>确定方法：<figure class="highlight plain"><figcaption><span>-15px;```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">.parent&#123;</span><br><span class="line">  width: 200px;</span><br><span class="line">  height: 200px;</span><br><span class="line">  border: 5px solid red;</span><br><span class="line">  padding: 12px;</span><br><span class="line">  margin: 15px;</span><br><span class="line">  background-color: black;</span><br><span class="line">&#125;</span><br><span class="line">.child&#123;</span><br><span class="line">    height: 20px;</span><br><span class="line">    backgrond: purple;</span><br><span class="line">    margin-top: -15px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="文字先出现与后出现，哪个？"><a href="#文字先出现与后出现，哪个？" class="headerlink" title="文字先出现与后出现，哪个？"></a>文字先出现与后出现，哪个？</h3><p>后出现的离用户眼睛更近。（块级元素也是如此）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.parent&#123;</span><br><span class="line">    color: red;</span><br><span class="line">&#125;</span><br><span class="line">.child&#123;</span><br><span class="line">    color: black;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>inline-block元素与内联元素相同。</p>
+<h3 id="浮动？"><a href="#浮动？" class="headerlink" title="浮动？"></a>浮动？</h3><p>处于内联元素与块级元素之间。<br>所以浮动元素内的文字比内联元素中的文字低。</p>
+<h3 id="相对定位元素"><a href="#相对定位元素" class="headerlink" title="相对定位元素"></a>相对定位元素</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">最高的</span><br><span class="line">z-index只能给定位元素加。</span><br></pre></td></tr></table></figure>
+<p>.relative1{<br>    width: 100px;<br>    height: 100px;<br>    background: orange;<br>    position: relative;<br>}<br>.relative2{<br>    width: 100px;<br>    height: 100px;<br>    background: green;<br>    position: relative;<br>}<br><code>如果两个都是相对定位，后出现的盖住先出现的（离用户眼睛更近）.
+z-index默认auto，如果给.relative加</code>z-index: 1;<code>他会盖住relative2.
+如果两个都是</code>z-index:1;<code>,relative2会盖住relative1，因为后出现的是relative2.</code>position:absolute;<code>与</code>position:relative;<code>`</code>的三种情况都是如此。</p>
+<h2 id="堆叠上下文"><a href="#堆叠上下文" class="headerlink" title="堆叠上下文"></a>堆叠上下文</h2><p>在父元素上绝对/相对定位之后，并且z-index不是auto。<br>MDN</p>
+<h2 id="堆叠上下文对z-index的影响"><a href="#堆叠上下文对z-index的影响" class="headerlink" title="堆叠上下文对z-index的影响"></a>堆叠上下文对z-index的影响</h2>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/27/CSS学习之Selectors、animation等/" class="archive-article-date">
-  	<time datetime="2018-07-27T07:13:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/27/CSS学习之Selectors、animation等/">CSS学习之Selectors、animation等</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/27/原型及原型链/" class="archive-article-date">
-  	<time datetime="2018-07-27T02:41:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-27</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2018/11/09/CSS总结（icon）/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          CSS总结（icon）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/11/08/CSS总结（第一部分）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS总结（第一部分）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/27/原型及原型链/">原型及原型链</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/26/Tween-缓动/" class="archive-article-date">
-  	<time datetime="2018-07-26T13:18:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/26/Tween-缓动/">Tween-缓动</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/23/JS数据类型转换/" class="archive-article-date">
-  	<time datetime="2018-07-23T06:25:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/23/JS数据类型转换/">JS数据类型转换</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/23/JS数据/" class="archive-article-date">
-  	<time datetime="2018-07-23T03:01:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/23/JS数据/">JS数据</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/13/JS怎么学？/" class="archive-article-date">
-  	<time datetime="2018-07-13T09:32:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/13/JS怎么学？/">JS怎么学？</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/28/CSS居中/" class="archive-article-date">
-  	<time datetime="2018-06-28T08:24:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/28/CSS居中/">CSS居中</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/01/HTML标签/" class="archive-article-date">
-  	<time datetime="2018-06-01T08:52:51.576Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/30/Vim和MD/" class="archive-article-date">
-  	<time datetime="2018-05-30T03:07:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/30/Vim和MD/">Vim和MD</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/29/简易服务器/" class="archive-article-date">
-  	<time datetime="2018-05-29T05:11:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/29/简易服务器/">简易服务器</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/page/2/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/4/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -456,8 +276,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

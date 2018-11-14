@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Smallvica</title>
+  <title>CSS总结（第一部分） | Smallvica</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Smallvica">
-<meta property="og:url" content="http://yoursite.com/archives/page/3/index.html">
+  <meta name="description" content="CSS总结。  实现内联元素的两端对齐：12345678910111213141516&amp;lt;style&amp;gt;    span&amp;#123;      border: 1px solid red;      display: inline-block;      width: 100px;      text-align: justify;      line-height: 20px;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS总结（第一部分）">
+<meta property="og:url" content="http://yoursite.com/2018/11/08/CSS总结（第一部分）/index.html">
 <meta property="og:site_name" content="Smallvica">
+<meta property="og:description" content="CSS总结。  实现内联元素的两端对齐：12345678910111213141516&amp;lt;style&amp;gt;    span&amp;#123;      border: 1px solid red;      display: inline-block;      width: 100px;      text-align: justify;      line-height: 20px;">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-08T17:34:42.283Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Smallvica">
+<meta name="twitter:title" content="CSS总结（第一部分）">
+<meta name="twitter:description" content="CSS总结。  实现内联元素的两端对齐：12345678910111213141516&amp;lt;style&amp;gt;    span&amp;#123;      border: 1px solid red;      display: inline-block;      width: 100px;      text-align: justify;      line-height: 20px;">
   
     <link rel="alternative" href="/atom.xml" title="Smallvica" type="application/atom+xml">
   
@@ -150,289 +154,140 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-CSS总结（第一部分）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS总结（第一部分）
+    </h1>
+  
+
+        
+        <a href="/2018/11/08/CSS总结（第一部分）/" class="archive-article-date">
+  	<time datetime="2018-11-08T14:58:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-08</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>CSS总结。</p>
+</blockquote>
+<h3 id="实现内联元素的两端对齐："><a href="#实现内联元素的两端对齐：" class="headerlink" title="实现内联元素的两端对齐："></a>实现内联元素的两端对齐：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    span&#123;</span><br><span class="line">      border: 1px solid red;</span><br><span class="line">      display: inline-block;</span><br><span class="line">      width: 100px;</span><br><span class="line">      text-align: justify;</span><br><span class="line">      line-height: 20px;</span><br><span class="line">      over-flow: hidden;</span><br><span class="line">      height: 20px;</span><br><span class="line">    &#125;</span><br><span class="line">    span::after&#123;</span><br><span class="line">      content: &apos;&apos;;</span><br><span class="line">      display: inline-block;</span><br><span class="line">      width: 100%;</span><br><span class="line">    &#125;</span><br><span class="line">    在姓名下方另起一行，撑起宽度，然后隐藏。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;span&gt;姓名&lt;/span&gt; &lt;br&gt;</span><br><span class="line">&lt;span&gt;联系方式&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="inline元素中间的空格"><a href="#inline元素中间的空格" class="headerlink" title="inline元素中间的空格"></a>inline元素中间的空格</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">  &lt;li&gt;选项1&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;选项2&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;选项3&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;选项4&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;选项5&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">  ul &#123;</span><br><span class="line">    padding: 0;</span><br><span class="line">    margin: 0;</span><br><span class="line">    list-style: none;</span><br><span class="line">  &#125;</span><br><span class="line">    ul &gt; li&#123;</span><br><span class="line">      display: inline-block;</span><br><span class="line">      border: 1px solid red;</span><br><span class="line">    &#125;</span><br><span class="line">  &lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<p>inline元素还是inline元素 中间的换行都会出现空格，如何没有空格<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">ul &#123;</span><br><span class="line">    padding: 0;</span><br><span class="line">    margin: 0;</span><br><span class="line">    list-style: none;</span><br><span class="line">    border: 1px solid red;</span><br><span class="line">  &#125;</span><br><span class="line">    ul &gt; li&#123;</span><br><span class="line">      float: left;</span><br><span class="line">      border: 1px solid red;</span><br><span class="line">    &#125;</span><br><span class="line">    .clearfix::after&#123;</span><br><span class="line">      content: &apos;&apos;;</span><br><span class="line">      display: block;</span><br><span class="line">      clear: both;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;ul class=&quot;clearfix&quot;&gt;</span><br><span class="line">   &lt;li&gt;选项1&lt;/li&gt;</span><br><span class="line">   &lt;li&gt;选项2&lt;/li&gt;</span><br><span class="line">   &lt;li&gt;选项3&lt;/li&gt;</span><br><span class="line">   &lt;li&gt;选项4&lt;/li&gt;</span><br><span class="line">   &lt;li&gt;选项5&lt;/li&gt;</span><br><span class="line"> &lt;/ul&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="文字溢出省略号（div中）"><a href="#文字溢出省略号（div中）" class="headerlink" title="文字溢出省略号（div中）"></a>文字溢出省略号（div中）</h3><h4 id="一行文字溢出"><a href="#一行文字溢出" class="headerlink" title="一行文字溢出"></a>一行文字溢出</h4><figure class="highlight plain"><figcaption><span>break-all;```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">字面理解就是可以把一个词打开，哪里都可以。</span><br><span class="line">```white-space: nowrap;</span><br></pre></td></tr></table></figure>
+<p>可以阻止文字换行。<br><figure class="highlight plain"><figcaption><span>ellipsis;```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">  div&#123;</span><br><span class="line">    border: 1px solid red;</span><br><span class="line">    white-space: nowrap;</span><br><span class="line">    overflow:hidden;</span><br><span class="line">    text-overflow: ellipsis;</span><br><span class="line">    </span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="多行文字溢出"><a href="#多行文字溢出" class="headerlink" title="多行文字溢出"></a>多行文字溢出</h4><p>直接搜索css multi line-text ellipsis<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">  border: 1px solid red;</span><br><span class="line">  display: -webkit-box;</span><br><span class="line">  -webkit-line-clamp: 2;                    //显示几行</span><br><span class="line">  -webkit-box-orient: vertical;</span><br><span class="line">  overflow: hidden;                         //多余隐藏</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="文字垂直居中（div中）"><a href="#文字垂直居中（div中）" class="headerlink" title="文字垂直居中（div中）"></a>文字垂直居中（div中）</h3><p>小白写法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">    border: 1px solid red;</span><br><span class="line">    height: 40px;</span><br><span class="line">    line-height: 40px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>正确写法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">    border:1px solid red; //border占据空间，可以用outline不占据空间。</span><br><span class="line">    line-height: 24px;</span><br><span class="line">    padding: 8px 0;</span><br><span class="line">    text-lign: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>水平居中直接text-align：center；<br>这样写的好处在于无论文字多少 不会出现bug（排版混乱的问题）。</p>
+<h3 id="margin合并问题"><a href="#margin合并问题" class="headerlink" title="margin合并问题"></a>margin合并问题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.dad&#123;</span><br><span class="line">  border: 5px solid red;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">  .son&#123;</span><br><span class="line">    border: 10px solid black;</span><br><span class="line">    line-height: 40px;</span><br><span class="line">    padding: 20px;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>这样洗，只要.son加line-height或者padding,.dad都会撑大。<br>如果给.son加一个<code>margin: 10px ;</code>后,.dad会不会被撑大呢。<br>答案： 不会。<br>这是因为.son和.dad的margin合并<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.dad&#123;</span><br><span class="line">  outline: 5px solid red;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">  .son&#123;</span><br><span class="line">    border: 10px solid black;</span><br><span class="line">    padding: 20px;</span><br><span class="line">    margin: 10px;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+<p>如何解决这个问题</p>
+<ul>
+<li>加border-top、border-bottom</li>
+<li>padding-top、padding-bottom</li>
+<li>overflow: hidden;(不推荐<br>)</li>
+<li>写一个字（内联元素）<br>就不会合并margin<h3 id="div高度"><a href="#div高度" class="headerlink" title="div高度"></a>div高度</h3>div高度由内部文档流元素高度的总和决定的。<br>文档流，文档流中内联元素从左到右依次排列，不够换行，块级元素从上到下。<h4 id="脱离文档流-算高度的时候别叫上我"><a href="#脱离文档流-算高度的时候别叫上我" class="headerlink" title="脱离文档流(算高度的时候别叫上我)"></a>脱离文档流(算高度的时候别叫上我)</h4></li>
+<li>float: left;</li>
+<li>position: absolute;</li>
+<li>position: fixd;<br>position: absolute;不会脱离文档流。<h4 id="div中的div如何垂直居中"><a href="#div中的div如何垂直居中" class="headerlink" title="div中的div如何垂直居中"></a>div中的div如何垂直居中</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.dad&#123;</span><br><span class="line">  outline: 1px solid green;</span><br><span class="line">  padding: 100px 0;</span><br><span class="line">&#125;</span><br><span class="line">.son&#123;</span><br><span class="line">  border: 5px solid black;</span><br><span class="line">  width: 200px;</span><br><span class="line">  padding: 10px;</span><br><span class="line">  margin: 0 auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>父元素中加上下padding可以实现上下居中；<br>子元素中加<figure class="highlight plain"><figcaption><span>0 auto;```可以实现水平居中。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+ 高度宽度确定实现：</span><br></pre></td></tr></table></figure></p>
+<pre><code>.dad{
+  outline: 1px solid green;
+  padding: 100px 0;
+  box-sizing: border-box;
+}
+.son{
+  border: 5px solid black;
+  width: 200px;
+  padding: 10px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  heigt: 200px;
+}
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">```margin: auto;```配合定宽定高是可以实现的。</span><br><span class="line">+ 高度宽度不能确定</span><br></pre></td></tr></table></figure>
+<p>.dad{<br>      border: 1px solid green;<br>      padding: 100px 0;<br>      box-sizing: border-box;<br>      display: flex;<br>      justify-content:center;<br>      align-items: center;<br>    }<br>.son{<br>    border: 5px solid black;<br>    padding: 10px;<br>    heigt: auto;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">主要加三句</span><br></pre></td></tr></table></figure></p>
+<p>display:flex;<br>justify-content:center;<br>align-items: center;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">如何写一个1:1的div</span><br></pre></td></tr></table></figure></p>
+<p>.one{<br>    padding-top: 100%;<br>}<br><code>`</code></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/27/CSS学习之Selectors、animation等/" class="archive-article-date">
-  	<time datetime="2018-07-27T07:13:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/27/CSS学习之Selectors、animation等/">CSS学习之Selectors、animation等</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/27/原型及原型链/" class="archive-article-date">
-  	<time datetime="2018-07-27T02:41:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-27</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2018/11/09/CSS总结（堆叠上下文）/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          CSS总结（堆叠上下文）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/11/06/立即执行函数/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">立即执行函数</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/27/原型及原型链/">原型及原型链</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/26/Tween-缓动/" class="archive-article-date">
-  	<time datetime="2018-07-26T13:18:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/26/Tween-缓动/">Tween-缓动</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/23/JS数据类型转换/" class="archive-article-date">
-  	<time datetime="2018-07-23T06:25:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/23/JS数据类型转换/">JS数据类型转换</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/23/JS数据/" class="archive-article-date">
-  	<time datetime="2018-07-23T03:01:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/23/JS数据/">JS数据</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/13/JS怎么学？/" class="archive-article-date">
-  	<time datetime="2018-07-13T09:32:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/13/JS怎么学？/">JS怎么学？</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/28/CSS居中/" class="archive-article-date">
-  	<time datetime="2018-06-28T08:24:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/28/CSS居中/">CSS居中</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/01/HTML标签/" class="archive-article-date">
-  	<time datetime="2018-06-01T08:52:51.576Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/30/Vim和MD/" class="archive-article-date">
-  	<time datetime="2018-05-30T03:07:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/30/Vim和MD/">Vim和MD</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/29/简易服务器/" class="archive-article-date">
-  	<time datetime="2018-05-29T05:11:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/29/简易服务器/">简易服务器</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/page/2/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/4/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -456,8 +311,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

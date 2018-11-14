@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Smallvica</title>
+  <title>CSS总结（icon） | Smallvica</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Smallvica">
-<meta property="og:url" content="http://yoursite.com/archives/page/3/index.html">
+  <meta name="description" content="PS切图PS切出3个icon图 后，3个 img标签搞定 background icon与PS切图相比，不会变形12345&amp;lt;div class=&amp;quot;icons&amp;quot; style=&amp;quot;text-align: center;&amp;quot;&amp;gt;   &amp;lt;div class=&amp;quot;icon qq&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;   &amp;lt;div cla">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS总结（icon）">
+<meta property="og:url" content="http://yoursite.com/2018/11/09/CSS总结（icon）/index.html">
 <meta property="og:site_name" content="Smallvica">
+<meta property="og:description" content="PS切图PS切出3个icon图 后，3个 img标签搞定 background icon与PS切图相比，不会变形12345&amp;lt;div class=&amp;quot;icons&amp;quot; style=&amp;quot;text-align: center;&amp;quot;&amp;gt;   &amp;lt;div class=&amp;quot;icon qq&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;   &amp;lt;div cla">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-09T09:00:24.659Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Smallvica">
+<meta name="twitter:title" content="CSS总结（icon）">
+<meta name="twitter:description" content="PS切图PS切出3个icon图 后，3个 img标签搞定 background icon与PS切图相比，不会变形12345&amp;lt;div class=&amp;quot;icons&amp;quot; style=&amp;quot;text-align: center;&amp;quot;&amp;gt;   &amp;lt;div class=&amp;quot;icon qq&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;   &amp;lt;div cla">
   
     <link rel="alternative" href="/atom.xml" title="Smallvica" type="application/atom+xml">
   
@@ -150,289 +154,104 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-CSS总结（icon）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS总结（icon）
+    </h1>
+  
+
+        
+        <a href="/2018/11/09/CSS总结（icon）/" class="archive-article-date">
+  	<time datetime="2018-11-09T07:38:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-09</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="PS切图"><a href="#PS切图" class="headerlink" title="PS切图"></a>PS切图</h2><p>PS切出3个icon图 后，<br>3个 img标签搞定</p>
+<h2 id="background-icon"><a href="#background-icon" class="headerlink" title="background icon"></a>background icon</h2><p>与PS切图相比，不会变形<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;icons&quot; style=&quot;text-align: center;&quot;&gt;</span><br><span class="line">   &lt;div class=&quot;icon qq&quot;&gt;&lt;/div&gt;</span><br><span class="line">   &lt;div class=&quot;icon weixin&quot;&gt;&lt;/div&gt;</span><br><span class="line">   &lt;div class=&quot;icon weibo&quot;&gt;&lt;/div&gt;</span><br><span class="line"> &lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">.icons &gt; .icon&#123;</span><br><span class="line">  margin: 0 25px;</span><br><span class="line">  border: 1px solid red;</span><br><span class="line">  display: inline-block;</span><br><span class="line">  width: 100px;</span><br><span class="line">  height: 100px;</span><br><span class="line">  background: transparent url(./qq.png) no-repeat 0 0;</span><br><span class="line">&#125;</span><br><span class="line">  .icons &gt; .icon.qq&#123;</span><br><span class="line">    background-image: url(./qq.png);</span><br><span class="line">  &#125;</span><br><span class="line">  .icons &gt; .icon.weixin&#123;</span><br><span class="line">    background-image: url(./weixin.png);</span><br><span class="line">  &#125;</span><br><span class="line">  .icons &gt; .icon.weibo&#123;</span><br><span class="line">    background-image: url(./weibo.png);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="CSS-Sprites"><a href="#CSS-Sprites" class="headerlink" title="CSS Sprites"></a>CSS Sprites</h2><p>google CSS sprite generator<br>原理： 展示你想要看到的</p>
+<h2 id="iconfont"><a href="#iconfont" class="headerlink" title="iconfont"></a>iconfont</h2><p>HTML:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;xxx&quot; style=&quot;font-family: iconfont;&quot;&gt;</span><br><span class="line">&amp;#xe613;&amp;#xe614;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">@font-face &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></p>
+<p>&amp;#xe6<br>之后的<br>字体</p>
+<ul>
+<li>伪类表示：<br>.xxx::before{<br>  content: ‘\e614’;<br>}</li>
+</ul>
+<hr>
+<p>CSS:<br>自动生成：Font class<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;&quot; &gt;</span><br><span class="line">&lt;span class = &quot;iconfont icon-qq&quot; &gt;&lt;/span&gt;</span><br><span class="line">&lt;span class = &quot;iconfont icon-weixin&quot; &gt;&lt;/span&gt;</span><br><span class="line">&lt;span class = &quot;iconfont icon-weibo&quot; &gt;&lt;/span&gt;</span><br></pre></td></tr></table></figure></p>
+<p>JS:<br>svg</p>
+<h2 id="css法"><a href="#css法" class="headerlink" title="css法"></a>css法</h2><p>cssicon.space</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/27/CSS学习之Selectors、animation等/" class="archive-article-date">
-  	<time datetime="2018-07-27T07:13:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/27/CSS学习之Selectors、animation等/">CSS学习之Selectors、animation等</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/27/原型及原型链/" class="archive-article-date">
-  	<time datetime="2018-07-27T02:41:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-27</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2018/11/12/CSS总结（移动端）/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          CSS总结（移动端）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/11/09/CSS总结（堆叠上下文）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS总结（堆叠上下文）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/27/原型及原型链/">原型及原型链</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/26/Tween-缓动/" class="archive-article-date">
-  	<time datetime="2018-07-26T13:18:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/26/Tween-缓动/">Tween-缓动</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/23/JS数据类型转换/" class="archive-article-date">
-  	<time datetime="2018-07-23T06:25:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/23/JS数据类型转换/">JS数据类型转换</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/23/JS数据/" class="archive-article-date">
-  	<time datetime="2018-07-23T03:01:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/23/JS数据/">JS数据</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/13/JS怎么学？/" class="archive-article-date">
-  	<time datetime="2018-07-13T09:32:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/13/JS怎么学？/">JS怎么学？</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/28/CSS居中/" class="archive-article-date">
-  	<time datetime="2018-06-28T08:24:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/28/CSS居中/">CSS居中</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/01/HTML标签/" class="archive-article-date">
-  	<time datetime="2018-06-01T08:52:51.576Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/30/Vim和MD/" class="archive-article-date">
-  	<time datetime="2018-05-30T03:07:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/30/Vim和MD/">Vim和MD</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/29/简易服务器/" class="archive-article-date">
-  	<time datetime="2018-05-29T05:11:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/29/简易服务器/">简易服务器</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/page/2/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/4/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -456,8 +275,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

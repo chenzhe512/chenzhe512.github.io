@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Smallvica</title>
+  <title>CSS总结（BFC） | Smallvica</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Smallvica">
-<meta property="og:url" content="http://yoursite.com/archives/page/3/index.html">
+  <meta name="description" content="BFC.  MDN 对于BFC的定义一个块格式化上下文（block formatting context） 是Web页面的可视化CSS渲染出的一部分。它是块级盒布局出现的区域，也是浮动层元素进行交互的区域。 一个块格式化上下文由以下之一创建：  根元素或其它包含它的元素 浮动元素 (元素的 float 不是 none) 绝对定位元素 (元素具有 position 为 absolute 或 fix">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS总结（BFC）">
+<meta property="og:url" content="http://yoursite.com/2018/11/13/CSS总结（BFC）/index.html">
 <meta property="og:site_name" content="Smallvica">
+<meta property="og:description" content="BFC.  MDN 对于BFC的定义一个块格式化上下文（block formatting context） 是Web页面的可视化CSS渲染出的一部分。它是块级盒布局出现的区域，也是浮动层元素进行交互的区域。 一个块格式化上下文由以下之一创建：  根元素或其它包含它的元素 浮动元素 (元素的 float 不是 none) 绝对定位元素 (元素具有 position 为 absolute 或 fix">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-13T08:04:09.813Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Smallvica">
+<meta name="twitter:title" content="CSS总结（BFC）">
+<meta name="twitter:description" content="BFC.  MDN 对于BFC的定义一个块格式化上下文（block formatting context） 是Web页面的可视化CSS渲染出的一部分。它是块级盒布局出现的区域，也是浮动层元素进行交互的区域。 一个块格式化上下文由以下之一创建：  根元素或其它包含它的元素 浮动元素 (元素的 float 不是 none) 绝对定位元素 (元素具有 position 为 absolute 或 fix">
   
     <link rel="alternative" href="/atom.xml" title="Smallvica" type="application/atom+xml">
   
@@ -150,289 +154,111 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-CSS总结（BFC）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS总结（BFC）
+    </h1>
+  
+
+        
+        <a href="/2018/11/13/CSS总结（BFC）/" class="archive-article-date">
+  	<time datetime="2018-11-13T07:03:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-13</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>BFC.</p>
+</blockquote>
+<h2 id="MDN-对于BFC的定义"><a href="#MDN-对于BFC的定义" class="headerlink" title="MDN 对于BFC的定义"></a>MDN 对于BFC的定义</h2><p>一个块格式化上下文（block formatting context） 是Web页面的可视化CSS渲染出的一部分。它是块级盒布局出现的区域，也是浮动层元素进行交互的区域。</p>
+<p>一个块格式化上下文由以下之一创建：</p>
+<ul>
+<li>根元素或其它包含它的元素</li>
+<li>浮动元素 (元素的 float 不是 none)</li>
+<li>绝对定位元素 (元素具有 position 为 absolute 或 fixed)</li>
+<li>内联块 (元素具有 display: inline-block)</li>
+<li>表格单元格 (元素具有 display: table-cell，HTML表格单元格默认属性)</li>
+<li>表格标题 (元素具有 display: table-caption, HTML表格标题默认属性)</li>
+<li>具有overflow 且值不是 visible 的块元素，</li>
+<li>display: flow-root</li>
+<li>column-span: all 应当总是会创建一个新的格式化上下文，即便具有 column-span: all 的元素并不被包裹在一个多列容器中。<br>一个块格式化上下文包括创建它的元素内部所有内容，除了被包含于创建新的块级格式化上下文的后代元素内的元素。</li>
+</ul>
+<p>块格式化上下文对于定位 (参见 float) 与清除浮动 (参见 clear) 很重要。定位和清除浮动的样式规则只适用于处于同一块格式化上下文内的元素。浮动不会影响其它块格式化上下文中元素的布局，并且清除浮动只能清除同一块格式化上下文中在它前面的元素的浮动。</p>
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><p>唯一一个触发BFC的属性display:flow-root;<br>其他什么都不会触发。<br>一旦是BFC就有一个功能：<br>将它内部的浮动元素包括住。<br>第二个动能：<br>功能2：兄弟之间划清界限<br>用 float + div 做左右自适应布局</p>
+<p>margin合并</p>
+<p>float:left;和overflow:auto;配合实现浮动布局。还可以其他的值。<br>如果用两个float:left;的话会导致didi不能自适应。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/27/CSS学习之Selectors、animation等/" class="archive-article-date">
-  	<time datetime="2018-07-27T07:13:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/27/CSS学习之Selectors、animation等/">CSS学习之Selectors、animation等</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/27/原型及原型链/" class="archive-article-date">
-  	<time datetime="2018-07-27T02:41:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-27</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2018/11/13/CSS总结（动态REM）/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          CSS总结（动态REM）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/11/12/CSS总结（Flex布局）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS总结（Flex布局）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/27/原型及原型链/">原型及原型链</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/26/Tween-缓动/" class="archive-article-date">
-  	<time datetime="2018-07-26T13:18:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/26/Tween-缓动/">Tween-缓动</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/23/JS数据类型转换/" class="archive-article-date">
-  	<time datetime="2018-07-23T06:25:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/23/JS数据类型转换/">JS数据类型转换</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/23/JS数据/" class="archive-article-date">
-  	<time datetime="2018-07-23T03:01:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/23/JS数据/">JS数据</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/13/JS怎么学？/" class="archive-article-date">
-  	<time datetime="2018-07-13T09:32:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/13/JS怎么学？/">JS怎么学？</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/28/CSS居中/" class="archive-article-date">
-  	<time datetime="2018-06-28T08:24:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/28/CSS居中/">CSS居中</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/01/HTML标签/" class="archive-article-date">
-  	<time datetime="2018-06-01T08:52:51.576Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/30/Vim和MD/" class="archive-article-date">
-  	<time datetime="2018-05-30T03:07:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/30/Vim和MD/">Vim和MD</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/29/简易服务器/" class="archive-article-date">
-  	<time datetime="2018-05-29T05:11:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/29/简易服务器/">简易服务器</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/page/2/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/4/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -456,8 +282,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
